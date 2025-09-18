@@ -7,36 +7,57 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Tiny5&display=swap" rel="stylesheet">
     <style>
+        * {
+          margin: 0;
+        }
         body {
             background-color: #999;
             background-image: url(/static/bg-duncan.jpg);
             background-size: cover;
             background-repeat: no-repeat;
             background-attachment: fixed;
+
+            xbackground-image: url(/static/Grid-1920-12-0-32.png);
+            xbackground-size: initial;
+            xbackground-attachment: initial;
+            xbackground-repeat: repeat;
         }
         .main1 {
           backdrop-filter: blur(40px);
           max-width: 600px;
           margin: 0 auto;
-          padding: 20px;
+          padding: 32px;
+        }
+        .topHeader {
+          height: 32px;
+          font-family: monospace;
+        }
+        .topHeader a {
+          color: #222;
+        }
+        select {
+          font-family: monospace;
         }
         h2 {
           font-family: "Tiny5", sans-serif;
+          font-size: 24px;
+          line-height: 32px;
           font-weight: 400;
+          margin: 16px 0;
           font-style: normal;
           color: #333;
         }
         li {
           font-family: monospace;
+          line-height: 32px;
           text-transform: uppercase;
           letter-spacing: 2px;
-          margin-top: 5px;
         }
     </style>
 </head>
 <body>
     <div class="main1">
-        <div>
+        <div class="topHeader">
             <select>
                 <option value="">Фильтры</option>
                 <option value="">Игра</option>
