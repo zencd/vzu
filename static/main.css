@@ -1,0 +1,62 @@
+* {
+  margin: 0;
+}
+body {
+    background-color: #999;
+    background-image: url(/static/bg-duncan.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    xbackground-image: url(/static/Grid-1920-12-0-32.png);
+    xbackground-size: initial;
+    xbackground-attachment: initial;
+    xbackground-repeat: repeat;
+}
+.main1 {
+  backdrop-filter: blur(40px);
+  max-width: 650px;
+  margin: 0 auto;
+  padding: {{size2}}px;
+}
+.topHeader {
+  height: {{size2}}px;
+  font-family: monospace;
+}
+.topHeader a {
+  color: #222;
+}
+.topHeader a:hover {
+  color: #eee;
+}
+select {
+  font-family: monospace;
+  xbackground-color: transparent;
+  color: #222;
+}
+h2 {
+  font-family: "Tiny5", sans-serif;
+  font-size: 24px;
+  line-height: {{size2}}px;
+  font-weight: 400;
+  margin: {{size1}}px 0;
+  font-style: normal;
+  color: #333;
+}
+ol {
+  margin-left: 0;
+  padding-left: 0;
+}
+li {
+  font-family: monospace;
+  font-size: 12px;
+  line-height: {{size2}}px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  list-style-type: none;
+}
+.tag {
+  color: #555;
+}
+.icon {
+}
