@@ -38,7 +38,7 @@
       backdrop-filter: blur(50px);
       background-color: rgba(90,80,90,0.6);
       max-width: 650px;
-      margin: 32px auto 0 auto;
+      margin: 32px auto 32px auto;
       padding: 32px;
       padding-top: 16px;
     }
@@ -49,9 +49,16 @@
     .topHeader a {
       color: #222;
       color: #eed;
+      text-decoration: none;
     }
     .topHeader a:hover {
       color: #ffa;
+    }
+    .wanted {
+      font-family: monospace;
+      font-size: 12px;
+      line-height: 32px;
+      color: #eed;
     }
     select {
       font-family: monospace;
@@ -105,12 +112,6 @@
       list-style-type: none;
       color: #eed;
     }
-    li a {
-    }
-    li a:hover {
-    }
-    li a:visited {
-    }
     .tag {
       color: #888;
     }
@@ -150,9 +151,6 @@
       h2 {
         font-size: 22px;
       }
-      li {
-        font-size: 11px;
-      }
     }
   </style>
 </head>
@@ -178,11 +176,15 @@
         <option value="warhammer">🤷 ваха</option>
         <option value="zagi">🧑 заги</option>
     </select>
-    <a href="https://t.me/Gamesandhistory" target="_blank">Telegram</a>
-    <a href="https://www.twitch.tv/viktorzu/videos?filter=archives&sort=time" target="_blank">Twitch</a>
-    <a href="https://live.vkvideo.ru/viktorzu?tab=records" target="_blank">VK Play</a>
-    <a href="https://boosty.to/viktorzu" target="_blank">Boosty</a>
+    <a href="https://t.me/Gamesandhistory" target="_blank">Телега</a>
+    <a href="https://www.twitch.tv/viktorzu/videos?filter=archives&sort=time" target="_blank">Твич</a>
+    <a href="https://live.vkvideo.ru/viktorzu?tab=records" target="_blank">Вк</a>
+    <a href="https://boosty.to/viktorzu" target="_blank">Бусти</a>
+    <a href="./best.html">Лучшее</a>
     834
+  </div>
+  <div class="wanted">
+    Сериал Горец, Горец 1-2-3, Тёмный рыцарь - <a href="#" id="mlink">пишите</a> если хотите ими поделиться.
   </div>
   <div class="stream" data-tags="film game talk">
     <h2>2025.09.29 Вар Тандер в первый раз! Потом смотрим фильмы</h2>
@@ -9108,7 +9110,7 @@
     <ol>
       <li class="chapter" data-tags="visualnovel">
         <span class="icon">🎮</span>
-        Любовь, деньги и рок-н-ролл 4/4
+        Любовь, деньги, рок-н-ролл 4/4
 
         <a href="https://www.youtube.com/watch?v=oS5S0c7_GGk" target="_blank">ютуб</a>
         <a href="https://www.youtube.com/watch?v=CAMqkYDzCTU" target="_blank">ютуб</a>
@@ -9122,7 +9124,7 @@
     <ol>
       <li class="chapter" data-tags="visualnovel">
         <span class="icon">🎮</span>
-        Любовь, деньги и рок-н-ролл 3/4
+        Любовь, деньги, рок-н-ролл 3/4
 
         <a href="https://www.youtube.com/watch?v=aufxnWH853g" target="_blank">ютуб</a>
         <a href="https://www.youtube.com/watch?v=FhwiNkqVzyg" target="_blank">ютуб</a>
@@ -9136,7 +9138,7 @@
     <ol>
       <li class="chapter" data-tags="visualnovel">
         <span class="icon">🎮</span>
-        Любовь, деньги и рок-н-ролл 2/4
+        Любовь, деньги, рок-н-ролл 2/4
 
         <a href="https://www.youtube.com/watch?v=8vzEhsEuYtI" target="_blank">ютуб</a>
         <a href="https://www.youtube.com/watch?v=Q_SH7edyhYk" target="_blank">ютуб</a>
@@ -9150,7 +9152,7 @@
     <ol>
       <li class="chapter" data-tags="visualnovel">
         <span class="icon">🎮</span>
-        Любовь, деньги и рок-н-ролл 1/4
+        Любовь, деньги, рок-н-ролл 1/4
 
         <a href="https://www.youtube.com/watch?v=sxGXwk-WEPg" target="_blank">ютуб</a>
         <a href="https://www.youtube.com/watch?v=x7ucbMC8xGQ" target="_blank">ютуб</a>
@@ -14514,6 +14516,14 @@
       </li>
     </ol>
   </div>
+<script>
+document.getElementById('mlink').addEventListener('click', function(e) {
+  e.preventDefault();
+  var encoded = 'ZmFrZWFya2l2QHlhbmRleC5ydQ==';
+  var email = atob(encoded).substring(4);
+  window.location.href = 'mailto:' + email;
+});
+</script>
   <div class="footer">
     Сайт вобще не официальный.
     Стримов: 834.
