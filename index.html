@@ -14517,11 +14517,24 @@
     </ol>
   </div>
 <script>
+function copyTextToClipboard(text) {
+  if (!navigator.clipboard) {
+    alert(text);
+    return;
+  }
+  navigator.clipboard.writeText(text).then(function() {
+    alert('Емейл скопирован в буфер обмена: ' + text);
+  }, function(err) {
+    alert(text);
+  });
+}
 document.getElementById('mlink').addEventListener('click', function(e) {
   e.preventDefault();
   var encoded = 'ZmFrZWFya2l2QHlhbmRleC5ydQ==';
   var email = atob(encoded).substring(4);
-  window.location.href = 'mailto:' + email;
+  //window.location.href = 'mailto:' + email;
+  //alert(`Адрес для связи:\n${email}`)
+  copyTextToClipboard(email)
 });
 </script>
   <div class="footer">
