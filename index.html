@@ -22,14 +22,13 @@
     }
     a:hover {
       color: #ffa;
-      xtext-decoration: none;
     }
     body {
-        background-color: rgb(65, 59, 74);
-        background-image: url(/static/drazi.jpg);
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
+      background-color: rgb(65, 59, 74);
+      background-image: url(/static/drazi.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
 
     }
     .main1 {
@@ -49,7 +48,6 @@
     .topHeader a {
       color: #222;
       color: #eed;
-      text-decoration: none;
     }
     .topHeader a:hover {
       color: #ffa;
@@ -58,7 +56,7 @@
       font-family: monospace;
       font-size: 12px;
       line-height: 16px;
-      color: orange;
+      color: white;
     }
     select {
       font-family: monospace;
@@ -146,6 +144,8 @@
     }
     @media screen and (max-width: 767px) {
       .main1 {
+        margin-top: 0;
+        margin-bottom: 0;
         padding: 16px 6px;
       }
       h2 {
@@ -184,8 +184,8 @@
     <a href="./links.html">Ссылки</a>
   </div>
   <div class="wanted">
-    Отсутствуют: сериал Горец, Горец 1-2-3, Тёмный рыцарь, Джонни Квест, Война будущего.
-    <a href="#" id="mlink">Пишите</a> если хотите поделиться ими с общественностью.
+    Отсутствуют: сериал Горец, Горец 1-2-3, Тёмный рыцарь, Джонни Квест, Война будущего, Восставший из ада.
+    Пишите в <a href="https://example.com/" id="pmLink">ТГ</a> если хотите поделиться ими с общественностью.
   </div>
   <div class="stream" data-tags="film game talk">
     <h2>2025.09.29 Вар Тандер в первый раз! Потом смотрим фильмы</h2>
@@ -9013,19 +9013,6 @@
       </li>
     </ol>
   </div>
-  <div class="stream" data-tags="game">
-    <h2>2022.10.28 ~</h2>
-    <ol>
-      <li class="chapter" data-tags="game">
-        <span class="icon">🎮</span>
-        Destroyer: The U-Boat Hunter
-
-        <a href="https://www.youtube.com/watch?v=hS4iH9vEySY" target="_blank">ютуб</a>
-
-            <span class="tag">#игра</span>
-      </li>
-    </ol>
-  </div>
   <div class="stream" data-tags="film game warhammer">
     <h2>2022.10.28 Стукаю чилавеков в Warhammer 40,000</h2>
     <ol>
@@ -9042,9 +9029,21 @@
         <span class="icon">🎬</span>
         Восставший из ада 2022 на бусти
 
-        <a href="https://www.youtube.com/watch?v=FbYpWCJgmBM" target="_blank">ютуб</a>
 
             <span class="tag">#кино</span>
+      </li>
+    </ol>
+  </div>
+  <div class="stream" data-tags="game">
+    <h2>2022.10.28 ~</h2>
+    <ol>
+      <li class="chapter" data-tags="game">
+        <span class="icon">🎮</span>
+        Destroyer: The U-Boat Hunter
+
+        <a href="https://www.youtube.com/watch?v=hS4iH9vEySY" target="_blank">ютуб</a>
+
+            <span class="tag">#игра</span>
       </li>
     </ol>
   </div>
@@ -15333,23 +15332,14 @@
     </ol>
   </div>
 <script>
-function copyEmailToClipboard(email) {
-  if (!navigator.clipboard) {
-    alert(email);
-    return;
-  }
-  navigator.clipboard.writeText(email).then(function() {
-    alert('Емейл скопирован в буфер обмена.');
-  }, function(err) {
-    alert(email);
-  });
+const listener = e => {
+  const s = atob('aHR0cHM6Ly90Lm1lL3BhdmVsX3Zsc19mYWtl');
+  const email = s.substring(0, s.length - 5);
+  e.target.setAttribute('href', email);
 }
-document.getElementById('mlink').addEventListener('click', function(e) {
-  e.preventDefault();
-  var encoded = 'ZmFrZWFya2l2QHlhbmRleC5ydQ==';
-  var email = atob(encoded).substring(4);
-  copyEmailToClipboard(email)
-});
+const pmLink = document.getElementById('pmLink')
+pmLink.addEventListener('mouseover', listener);
+pmLink.addEventListener('focus', listener);
 </script>
   <div class="footer">
     Сайт вобще не официальный.
