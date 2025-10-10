@@ -142,6 +142,14 @@
       text-decoration: none;
       color: #222 !important;
     }
+    .chapter[data-tags*="todo"] {
+      color: #f00 !important;
+      font-weight: bold;
+    }
+    @keyframes spin360 {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
     @media screen and (max-width: 767px) {
       .main1 {
         margin-top: 0;
@@ -188,6 +196,19 @@
   <div class="wanted">
     Отсутствуют: сериал Горец, Горец 1-2-3, Тёмный рыцарь, Джонни Квест, Война будущего, Восставший из ада, польский Ведьмак.
     Пишите в <a href="https://fuckthebots.com/" id="pmLink">телегу</a> если хотите поделиться ими с общественностью.
+  </div>
+  <div class="stream" data-tags="todo">
+    <h2>2025.10.03 Шекспир и шахматы!</h2>
+    <ol>
+      <li class="chapter" data-tags="todo">
+        <span class="icon">🤷</span>
+        todo
+
+        <a href="https://live.vkvideo.ru/viktorzu/record/b67ad535-0359-4007-9c16-76a75c3e0a80" target="_blank">вк</a>
+
+            <span class="tag">#todo</span>
+      </li>
+    </ol>
   </div>
   <div class="stream" data-tags="film game talk">
     <h2>2025.09.29 Вар Тандер в первый раз! Потом смотрим фильмы</h2>
@@ -15588,19 +15609,19 @@
   </div>
 <script>
 (function() {
-  const listener = e => {
+  const replacePmLink = e => {
     const s = atob('aHR0cHM6Ly90Lm1lL3BhdmVsX3Zsc19mYWtl');
     const email = s.substring(0, s.length - 5);
     e.target.setAttribute('href', email);
   }
-  const pmLink = document.getElementById('pmLink')
-  pmLink.addEventListener('mouseover', listener);
-  pmLink.addEventListener('focus', listener);
+  const $pmLink = document.getElementById('pmLink')
+  $pmLink.addEventListener('mouseover', replacePmLink);
+  $pmLink.addEventListener('focus', replacePmLink);
 })()
 </script>
   <div class="footer">
     Сайт вобще не официальный.
-    Стримов: 905.
+    Стримов: 906.
   </div>
 </div>
 <script src="/static/main.js"></script>

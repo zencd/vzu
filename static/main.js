@@ -1,5 +1,6 @@
 (function() {
   'use strict';
+  const log = console.log
   const $tagSelect = document.getElementById('tagSelect')
   $tagSelect.addEventListener('change', function() {
     const tag = $tagSelect.value
@@ -36,4 +37,11 @@
       $stream.style.display = 'block'
     })
   }
+
+  function startSpinning(element) {
+    element.style.animation = 'spin360 1s linear infinite';
+  }
+
+  document.querySelector('.refreshDataBadge').addEventListener('click', e => {startSpinning(e.target)})
+  document.querySelector('.hasNewDataBadge').addEventListener('click', e => {startSpinning(e.target)})
 }())
