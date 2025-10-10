@@ -161,13 +161,36 @@
       }
     }
   </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+  <script>
+    function toast(msg, color) {
+      Toastify({
+        text: msg,
+        duration: 4000,
+        //destination: "https://github.com/apvarun/toastify-js",
+        newWindow: true,
+        close: false,
+        gravity: "bottom",
+        position: "right",
+        stopOnFocus: true, // Prevents dismissing of toast on hover
+        style: {
+          background: color || 'grey',
+        },
+        onClick: function(){} // Callback after click
+      }).showToast();
+    }
+  </script>
 </head>
 <body>
 <div class="main1">
   <h1><a href=".">Виктор Зуев, начинающий стример</a></h1>
   <script>
-    const flash_msg = '';
-    const flash_color = '';
+    const flashMsg = '';
+    const flashColor = '';
+    if (flashMsg) {
+      toast(flashMsg, flashColor)
+    }
   </script>
 <h2>Достойно внимания</h2>
 <ol>

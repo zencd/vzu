@@ -43,5 +43,8 @@
   }
 
   document.querySelector('.refreshDataBadge').addEventListener('click', e => {startSpinning(e.target)})
-  document.querySelector('.hasNewDataBadge').addEventListener('click', e => {startSpinning(e.target)})
+  const $hasNewDataBadge = document.querySelector('.hasNewDataBadge')
+  if ($hasNewDataBadge) {
+    $hasNewDataBadge.addEventListener('click', e => {startSpinning(e.target)})
+  }
 }())
