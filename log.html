@@ -1,0 +1,1162 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Виктор Зуев, начинающий стример</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Tiny5&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+    }
+    div {
+      color: #888;
+    }
+    a {
+      color: #99f;
+    }
+    a:visited {
+      color: #d055d0;
+    }
+    a:hover {
+      color: #ffa;
+    }
+    body {
+      background-color: rgb(65, 59, 74);
+      background-image: url(/static/drazi.blur.png);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+
+    }
+    .main1 {
+      background-color: rgba(220,200,200,0.3);
+      background-color: rgba(180,160,160,0.3);
+      backdrop-filter: blur(50px);
+      background-color: rgba(90,80,90,0.6);
+      max-width: 650px;
+      margin: 32px auto 32px auto;
+      padding: 32px;
+      padding-top: 16px;
+      border-radius: 5px;
+    }
+    .topHeader {
+      height: 32px;
+      font-family: monospace;
+    }
+    .topHeader a {
+      color: #222;
+      color: #eed;
+    }
+    .topHeader a:hover {
+      color: #ffa;
+    }
+    .wanted {
+      font-family: monospace;
+      font-size: 12px;
+      line-height: 16px;
+      color: white;
+    }
+    .history {
+      font-family: monospace;
+      font-size: 12px;
+      line-height: 16px;
+      color: white;
+    }
+    select {
+      font-family: monospace;
+      xbackground-color: transparent;
+      color: #222;
+    }
+    h1 {
+      font-family: "Tiny5", sans-serif;
+      font-size: 32px;
+      line-height: 32px;
+      xcolor: #444;
+      xcolor: #964b00;
+      xcolor: #ffa;
+      margin: 16px 0;
+
+      xbackground: -webkit-linear-gradient(0.25turn, #faa, #ffa);
+      x-webkit-background-clip: text;
+      x-webkit-text-fill-color: transparent;
+    }
+    h1 a {
+      text-decoration: none;
+      color: #dcdcdc !important;
+    }
+    h1:hover {
+      background: -webkit-linear-gradient(0.25turn, #ffa, #ffa);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    h2 {
+      font-family: "Tiny5", sans-serif;
+      font-size: 24px;
+      line-height: 32px;
+      font-weight: 400;
+      margin: 16px 0;
+      font-style: normal;
+      color: #333;
+
+      background: -webkit-linear-gradient(0.25turn, #faa, #ffa);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    ol {
+      margin-left: 0;
+      padding-left: 0;
+    }
+    li {
+      font-family: monospace;
+      font-size: 12px;
+      line-height: 32px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      list-style-type: none;
+      color: #eed;
+    }
+    .tag {
+      color: #888;
+    }
+    .icon {
+    }
+    .footer {
+      xcolor: #888;
+      margin-top: 16px;
+      font-family: monospace;
+      font-size: 10px;
+      line-height: 32px;
+    }
+    .hasNewDataBadge {
+      position: fixed;
+      right: 10px; bottom: 10px;
+      width: 100px; height: 100px;
+      text-align: center; line-height: 100px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #afa, #aaf);
+      text-decoration: none;
+      color: #222 !important;
+    }
+    .refreshDataBadge {
+      position: fixed;
+      right: 10px; bottom: 120px;
+      width: 100px; height: 100px;
+      text-align: center; line-height: 100px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #777, #eee);
+      text-decoration: none;
+      color: #222 !important;
+    }
+    .chapter[data-tags*="todo"] {
+      color: #f00 !important;
+      font-weight: bold;
+    }
+    @keyframes spin360 {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+    @media screen and (max-width: 767px) {
+      .main1 {
+        margin-top: 0;
+        margin-bottom: 0;
+        padding: 16px 6px;
+      }
+      h2 {
+        font-size: 22px;
+      }
+    }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+  <script>
+    function toast(msg, color) {
+      Toastify({
+        text: msg,
+        duration: 4000,
+        //destination: "https://github.com/apvarun/toastify-js",
+        newWindow: true,
+        close: false,
+        gravity: "bottom",
+        position: "right",
+        stopOnFocus: true, // Prevents dismissing of toast on hover
+        style: {
+          background: color || 'grey',
+        },
+        onClick: function(){} // Callback after click
+      }).showToast();
+    }
+  </script>
+</head>
+<body>
+<div class="main1">
+  <h1><a href=".">Виктор Зуев, начинающий стример</a></h1>
+  <script>
+    const flashMsg = '';
+    const flashColor = '';
+    if (flashMsg) {
+      toast(flashMsg, flashColor)
+    }
+  </script>
+<style>
+  .historyEntry {
+      font-family: monospace;
+      font-size: 12px;
+      line-height: 32px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #eed;
+
+      margin-bottom: 16px;
+  }
+</style>
+<h2>История обновлений</h2>
+  <h2>2026-03-22</h2>
+  <div class="historyEntry">
+    Февраут, день 38. New Vegas, затем Кино с Андреем Загудаевым, ВОЗМОЖНО!!!
+    //
+    Fallout New Vegas P17
+    <a href="https://www.youtube.com/watch?v=_gg1vrk6M6s" target="_blank">ют</a>
+  </div>
+  <div class="historyEntry">
+    С ножами ползали Сальников и Зуев [Kanobu]
+    //
+    Commandos 2
+    <a href="https://www.youtube.com/watch?v=Xs2G_wh7SyQ" target="_blank">ют</a>
+  </div>
+  <div class="historyEntry">
+    Февраут, день 39. New Vegas, дорога к финалу
+    //
+    Fallout New Vegas P18
+    <a href="https://www.youtube.com/watch?v=IcQvvzYwjTI" target="_blank">ют</a>
+  </div>
+  <div class="historyEntry">
+    Февраут, день 41. New Vegas, ФИНАЛ
+    //
+    Fallout New Vegas P20
+    <a href="https://www.youtube.com/watch?v=WJvGcGQ0YV0" target="_blank">ют</a>
+  </div>
+  <div class="historyEntry">
+    Февраут, день 43. Продолжаем изучать Fallout 3
+    //
+    Fallout 3
+    <a href="https://www.youtube.com/watch?v=rJwz6xv8IFQ" target="_blank">ют</a>
+  </div>
+  <div class="historyEntry">
+    Февраут, день 44. Продолжаем изучать Fallout 3
+    //
+    Fallout 3
+    <a href="https://live.vkvideo.ru/viktorzu/record/5a081062-6c7f-469f-b801-f275e0821db0" target="_blank">вк</a>
+  </div>
+  <div class="historyEntry">
+    Февраут, день 44. Продолжаем изучать Fallout 3
+    //
+    Столетняя война 5-9 (Маховик истории)
+    <a href="https://live.vkvideo.ru/viktorzu/record/5a081062-6c7f-469f-b801-f275e0821db0" target="_blank">вк</a>
+  </div>
+  <div class="historyEntry">
+    Февраут, день 44. Продолжаем изучать Fallout 3
+    //
+    Легенда о героях Галактики 82-88
+    <a href="https://live.vkvideo.ru/viktorzu/record/5a081062-6c7f-469f-b801-f275e0821db0" target="_blank">вк</a>
+  </div>
+  <div class="historyEntry">
+    Февраут, день 42. Возвращение в Fallout 3
+    //
+    Fallout 3
+    <a href="https://www.youtube.com/watch?v=ytwBvy-bhnM" target="_blank">ют</a>
+  </div>
+  <div class="historyEntry">
+    Февраут, день 40. New Vegas, дорога к финалу, часть вторая
+    //
+    Fallout New Vegas P19
+    <a href="https://www.youtube.com/watch?v=FICa3jW1Nyo" target="_blank">ют</a>
+  </div>
+  <div class="historyEntry">
+    Февраут, день 37. New Vegas, затем Кино с Андреем Загудаевым
+    //
+    Fallout New Vegas P16
+    <a href="https://www.youtube.com/watch?v=EbNr7PEOFYA" target="_blank">ют</a>
+  </div>
+  <h2>2026-03-21</h2>
+  <div class="historyEntry">
+    Февраут, день 43. Продолжаем изучать Fallout 3
+    //
+    Fallout 3
+    <a href="https://live.vkvideo.ru/viktorzu/record/3a77a5a4-d5e8-4396-adc0-585593305768" target="_blank">вк</a>
+  </div>
+  <h2>2026-03-20</h2>
+  <div class="historyEntry">
+    П. Сальников, А. Загудаев, В. Зуев
+    //
+    Презентация Apple
+    <a href="https://www.youtube.com/watch?v=cWsIdJXEPjE" target="_blank">ют</a>
+  </div>
+  <div class="historyEntry">
+    Crossout в платьях: Сальников, Зуев. Осторожно, трапы.
+    //
+    Crossout
+    <a href="https://www.youtube.com/watch?v=r3CE3YhCMYE" target="_blank">ют</a>
+  </div>
+  <div class="historyEntry">
+    The Settlers в аду Данте: Зуев, Сальников
+    //
+    Frostpunk
+    <a href="https://www.youtube.com/watch?v=dtow3zmOP9U" target="_blank">ют</a>
+  </div>
+  <div class="historyEntry">
+    XboxRU: Зуев и Сальников
+    //
+    Gears of War 4 beta
+    <a href="https://www.youtube.com/watch?v=3nrPk442Sxw" target="_blank">ют</a>
+  </div>
+  <div class="historyEntry">
+    Танки грохотали
+    //
+    Sudden Strike 4
+    <a href="https://www.youtube.com/watch?v=n-MGqchHZdE" target="_blank">ют</a>
+  </div>
+  <div class="historyEntry">
+    XboxRU
+    //
+    Witcher 3
+    <a href="https://www.youtube.com/watch?v=Z3tUzKrXmfI" target="_blank">ют</a>
+  </div>
+  <div class="historyEntry">
+    В. Зуев, А. Загудаев
+    //
+    Divinity: Original Sin II ч. 1
+    <a href="https://www.youtube.com/watch?v=InC4dJHr7-o" target="_blank">ют</a>
+  </div>
+  <div class="historyEntry">
+    Тыгдымский конь тебе товарищ: Зуев, Загудаев, Сальников
+    //
+    Heroes of Might and Magic III ч. 2
+    <a href="https://www.youtube.com/watch?v=ljjSCt05mvU" target="_blank">ют</a>
+  </div>
+  <div class="historyEntry">
+    Crazy Collection с Ильей Мэддисоном
+    //
+    GTA: San Andreas
+    <a href="https://www.youtube.com/watch?v=p6W5zWNAcyw" target="_blank">ют</a>
+  </div>
+  <div class="historyEntry">
+    Crazy Collection с Ильей Мэддисоном
+    //
+    Ninja Gaiden 3
+    <a href="https://www.youtube.com/watch?v=f4Ai4P-hASM" target="_blank">ют</a>
+  </div>
+  <div class="historyEntry">
+    Crazy Collection с Ильей Мэддисоном
+    //
+    The Warriors
+    <a href="https://www.youtube.com/watch?v=PC2QGg32shc" target="_blank">ют</a>
+  </div>
+  <div class="historyEntry">
+    Зуев, Загудаев
+    //
+    GTA 5 по ролям, часть 1
+    <a href="https://www.youtube.com/watch?v=2vnoPuoWorI" target="_blank">ют</a>
+  </div>
+  <div class="historyEntry">
+    Crazy Collection с Ильей Мэддисоном
+    //
+    Mafia 2
+    <a href="https://www.youtube.com/watch?v=C1N7H17icjw" target="_blank">ют</a>
+  </div>
+  <div class="historyEntry">
+    Gamepilot: Зуев и Михайлов
+    //
+    Sid Meier&#039;s Gettysburg
+    <a href="https://www.youtube.com/watch?v=gMtYTmHxqdI" target="_blank">ют</a>
+  </div>
+  <div class="historyEntry">
+    В. Зуев, А. Загудаев
+    //
+    Lord of the Rings: Battle for Middle-earth II, ч. 2
+    <a href="https://www.youtube.com/watch?v=SRa_9pEZriY" target="_blank">ют</a>
+  </div>
+  <div class="historyEntry">
+    П. Сальников, В. Зуев, В. Мостицкий
+    //
+    Настольная Battlestar Galactica
+    <a href="https://www.youtube.com/watch?v=Cf_Y1TZFm_Y" target="_blank">ют</a>
+  </div>
+  <div class="historyEntry">
+    В. Зуев, Ю. Михайлов
+    //
+    Total War: Warhammer II
+    <a href="https://www.youtube.com/watch?v=myU8ivNdw0E" target="_blank">ют</a>
+  </div>
+  <div class="historyEntry">
+    В. Зуев, А. Загудаев, П. Сальников
+    //
+    Heroes of Might and Magic III ч. 1
+    <a href="https://www.youtube.com/watch?v=Su-K8xx63F8" target="_blank">ют</a>
+  </div>
+  <div class="historyEntry">
+    В. Зуев, А. Загудаев
+    //
+    Мор Утопия
+    <a href="https://www.youtube.com/watch?v=sg3tGTtEaDk" target="_blank">ют</a>
+  </div>
+  <div class="historyEntry">
+    XboxRU: Зуев, Белкин
+    //
+    The Division
+    <a href="https://www.youtube.com/watch?v=OR_HBfxlaCo" target="_blank">ют</a>
+  </div>
+  <div class="historyEntry">
+    В. Зуев, П. Сальников
+    //
+    Middle-earth: Shadow of War, 2я часть
+    <a href="https://www.youtube.com/watch?v=FfKgZcc3x3o" target="_blank">ют</a>
+  </div>
+  <div class="historyEntry">
+    The War is Over: Зуев, Загудаев, Сальников
+    //
+    Heroes of Might and Magic III ч. 3
+    <a href="https://www.youtube.com/watch?v=s-1zHaxwsAw" target="_blank">ют</a>
+  </div>
+  <div class="historyEntry">
+    Готовимся к ЧМ-2018
+    //
+    Football Manager 2018 ч. 5
+    <a href="https://www.youtube.com/watch?v=Ixh7MOUkUWQ" target="_blank">ют</a>
+  </div>
+  <div class="historyEntry">
+    Crazy Collection с Ильей Мэддисоном
+    //
+    Hooligans: Storm over Europe (Фанаты Шторм над Европой)
+    <a href="https://www.youtube.com/watch?v=6q35sHpgI5Y" target="_blank">ют</a>
+  </div>
+  <div class="historyEntry">
+    В. Зуев, А. Загудаев
+    //
+    Middle-earth: Shadow of War, 1я часть
+    <a href="https://www.youtube.com/watch?v=hfKYQQATOT8" target="_blank">ют</a>
+  </div>
+  <div class="historyEntry">
+    Crazy Collection с Ильей Мэддисоном
+    //
+    Far Cry
+    <a href="https://www.youtube.com/watch?v=U0F7EvicNQs" target="_blank">ют</a>
+  </div>
+  <div class="historyEntry">
+    В. Зуев, П. Сальников
+    //
+    Spintires: MudRunner
+    <a href="https://www.youtube.com/watch?v=faRErKSEtCk" target="_blank">ют</a>
+  </div>
+  <div class="historyEntry">
+    Виктор Зуев
+    //
+    Lord of the Rings: Battle for Middle-earth II, ч. 1
+    <a href="https://www.youtube.com/watch?v=vF32z2sbktE" target="_blank">ют</a>
+  </div>
+  <div class="historyEntry">
+    П. Сальников, В. Зуев, А. Каныгин
+    //
+    Князь: Легенды Лесной страны
+    <a href="https://www.youtube.com/watch?v=M6sI5NL5D2E" target="_blank">ют</a>
+  </div>
+  <div class="historyEntry">
+    Crazy Collection с Ильей Мэддисоном
+    //
+    Half-Life 2
+    <a href="https://www.youtube.com/watch?v=VLzPepXajn8" target="_blank">ют</a>
+  </div>
+  <div class="historyEntry">
+    В. Зуев, А. Загудаев
+    //
+    Cuphead
+    <a href="https://www.youtube.com/watch?v=3TYtIR71-oc" target="_blank">ют</a>
+  </div>
+  <div class="historyEntry">
+    Crazy Collection с Ильей Мэддисоном
+    //
+    Санитары подземелий
+    <a href="https://www.youtube.com/watch?v=U_HO9_keZF8" target="_blank">ют</a>
+  </div>
+  <div class="historyEntry">
+    Сальников, Ломакин, Зуев без микрофона
+    //
+    Doom 2
+    <a href="https://www.youtube.com/watch?v=ANNFcaqzAUM" target="_blank">ют</a>
+  </div>
+  <div class="historyEntry">
+    Виктор Зуев стукается в
+    //
+    Ancestors: Legacy со зрителями
+    <a href="https://www.youtube.com/watch?v=RJNFrgLrjck" target="_blank">ют</a>
+  </div>
+  <div class="historyEntry">
+    В. Зуев, А. Евглевский
+    //
+    Kingdom Come: Deliverance
+    <a href="https://www.youtube.com/watch?v=O1eKQOEPyrE" target="_blank">ют</a>
+  </div>
+  <div class="historyEntry">
+    В. Зуев, В. Мостицкий, П. Сальников
+    //
+    Assassin&#039;s Creed Origins
+    <a href="https://www.youtube.com/watch?v=kNXUV0bD3iA" target="_blank">ют</a>
+  </div>
+  <div class="historyEntry">
+    П. Сальников, А. Каныгин, В. Зуев
+    //
+    Destiny 2 Beta
+    <a href="https://www.youtube.com/watch?v=pucppsgWeGk" target="_blank">ют</a>
+  </div>
+  <div class="historyEntry">
+    П. Сальников, В. Зуев, А. Загудаев, И. Овчаренко, А. Мурадян, С. Ломакин
+    //
+    FIFA 18
+    <a href="https://www.youtube.com/watch?v=iQ5IMfZVG0g" target="_blank">ют</a>
+  </div>
+  <div class="historyEntry">
+    В. Зуев, С. Ломакин
+    //
+    Fall of Light
+    <a href="https://www.youtube.com/watch?v=o0Lkca9nm8M" target="_blank">ют</a>
+  </div>
+  <div class="historyEntry">
+    Виктор Зуев
+    //
+    Настольная Dark Souls
+    <a href="https://www.youtube.com/watch?v=AvIWz9wcYsQ" target="_blank">ют</a>
+  </div>
+  <div class="historyEntry">
+    Евдокимова, Зуев, Сальников, Мостицкий
+    //
+    Кровь и ярость / Blood Rage
+    <a href="https://www.youtube.com/watch?v=GWHGdMKc23g" target="_blank">ют</a>
+  </div>
+  <div class="historyEntry">
+    Виктор Зуев
+    //
+    Warhammer 40,000: Inquisitor - Martyr
+    <a href="https://www.youtube.com/watch?v=w0odYEhPT84" target="_blank">ют</a>
+  </div>
+  <div class="historyEntry">
+    Тополиный пух, жара, июль. Сидим с Анатоличем
+    //
+    Тёмный рыцарь 2008
+    <a href="https://vkvideo.ru/video-236820127_456239021" target="_blank">vk</a>
+  </div>
+  <div class="historyEntry">
+    П. Сальников, В. Зуев, А. Загудаев
+    //
+    Escape From Tarkov
+    <a href="https://www.youtube.com/watch?v=2DwDVheGyAo" target="_blank">ют</a>
+  </div>
+  <div class="historyEntry">
+    В. Зуев, А. Загудаев, П. Сальников
+    //
+    Call of Duty WWII
+    <a href="https://www.youtube.com/watch?v=I-4htSBl3m0" target="_blank">ют</a>
+  </div>
+  <div class="historyEntry">
+    Crazy Collection с Ильей Мэддисоном
+    //
+    Grim Fandango
+    <a href="https://www.youtube.com/watch?v=bZ0v33P9018" target="_blank">ют</a>
+  </div>
+  <div class="historyEntry">
+    Зуев, Загудаев
+    //
+    Middle-earth: Shadow of Mordor
+    <a href="https://www.youtube.com/watch?v=v9XpHVFar6E" target="_blank">ют</a>
+  </div>
+  <div class="historyEntry">
+    П. Сальников, В. Зуев, П. Болотский, А. Мурадян
+    //
+    Fortnite
+    <a href="https://www.youtube.com/watch?v=5WCaiTXEF5c" target="_blank">ют</a>
+  </div>
+  <div class="historyEntry">
+    Виктор Зуев и Вячеслав Мостицкий шалят ручками
+    //
+    Arms
+    <a href="https://www.youtube.com/watch?v=s5i7v0buw9k" target="_blank">ют</a>
+  </div>
+  <div class="historyEntry">
+    В. Зуев, А. Загудаев
+    //
+    Distrust
+    <a href="https://www.youtube.com/watch?v=E9WXq2xaFac" target="_blank">ют</a>
+  </div>
+  <div class="historyEntry">
+    Сальников, Зуев, Струков, Евдокимова
+    //
+    SmallWorld
+    <a href="https://www.youtube.com/watch?v=ZRURmXraZyc" target="_blank">ют</a>
+  </div>
+  <div class="historyEntry">
+    Crazy Collection с Ильей Мэддисоном и Занудой
+    //
+    Worms Armageddon
+    <a href="https://www.youtube.com/watch?v=_PTbHMGeE28" target="_blank">ют</a>
+  </div>
+  <div class="historyEntry">
+    Crazy Collection с Ильей Мэддисоном
+    //
+    Nekketsu Kakutou Densetsu и не только
+    <a href="https://www.youtube.com/watch?v=OhHbPmutr0g" target="_blank">ют</a>
+  </div>
+  <div class="historyEntry">
+    Андрей Загудаев
+    //
+    Uncharted: The Lost Legacy
+    <a href="https://www.youtube.com/watch?v=n77VvBFwUw8" target="_blank">ют</a>
+  </div>
+  <div class="historyEntry">
+    П. Сальников, В. Зуев, А. Загудаев, А. Каныгин
+    //
+    Sea of Thieves
+    <a href="https://www.youtube.com/watch?v=87ZAOXh0FcM" target="_blank">ют</a>
+  </div>
+  <div class="historyEntry">
+    XboxRU: Зуев, Загудаев
+    //
+    Battletoads (Rare Replay)
+    <a href="https://www.youtube.com/watch?v=ftSufA3-dk8" target="_blank">ют</a>
+  </div>
+  <div class="historyEntry">
+    В. Зуев, П. Сальников
+    //
+    Bloodborne
+    <a href="https://www.youtube.com/watch?v=vKn659F3Epk" target="_blank">ют</a>
+  </div>
+  <div class="historyEntry">
+    В. Зуев, А. Загудаев
+    //
+    Super Mario Odyssey
+    <a href="https://www.youtube.com/watch?v=qxwzV851Wsw" target="_blank">ют</a>
+  </div>
+  <div class="historyEntry">
+    В. Зуев, А. Загудаев, П. Сальников
+    //
+    Heroes of Might and Magic III ч. 1
+    <a href="https://www.youtube.com/watch?v=PyoU-m7o3hY" target="_blank">ют</a>
+  </div>
+  <div class="historyEntry">
+    Февраут, день 42. Возвращение в Fallout 3
+    //
+    Fallout 3
+    <a href="https://live.vkvideo.ru/viktorzu/record/520d0322-69fc-445b-b587-9dc052a25676" target="_blank">вк</a>
+  </div>
+  <div class="historyEntry">
+    Готовимся к ЧМ по футболу, часть 1
+    //
+    Football Manager 2018
+    <a href="https://www.youtube.com/watch?v=HM51-7G7tco" target="_blank">ют</a>
+  </div>
+  <div class="historyEntry">
+    В. Зуев, А. Загудаев
+    //
+    Lord of the Rings: Battle for Middle-earth II, ч. 3
+    <a href="https://www.youtube.com/watch?v=wjRsptd_Vqs" target="_blank">ют</a>
+  </div>
+  <h2>2026-03-19</h2>
+  <div class="historyEntry">
+    XboxRU
+    //
+    Mass Effect 1, первый стрим
+    <a href="https://www.twitch.tv/videos/62371460" target="_blank">тв</a>
+  </div>
+  <div class="historyEntry">
+    XboxRU
+    //
+    Mass Effect 1, обрывок
+    <a href="https://www.twitch.tv/videos/63000590" target="_blank">тв</a>
+  </div>
+  <div class="historyEntry">
+    XboxRU
+    //
+    Batman: Arkham Knight
+    <a href="https://www.twitch.tv/videos/6815394" target="_blank">тв</a>
+  </div>
+  <div class="historyEntry">
+    XboxRU
+    //
+    The Witcher 3
+    <a href="https://www.twitch.tv/videos/67189995" target="_blank">тв</a>
+  </div>
+  <div class="historyEntry">
+    XboxRU: Зуев, Загудаев
+    //
+    Battletoads (Rare Replay)
+    <a href="https://www.twitch.tv/videos/10658032" target="_blank">тв</a>
+  </div>
+  <div class="historyEntry">
+    XboxRU
+    //
+    SUPERHOT
+    <a href="https://www.twitch.tv/videos/64543688" target="_blank">тв</a>
+  </div>
+  <div class="historyEntry">
+    XboxRU
+    //
+    Witcher 3
+    <a href="https://www.twitch.tv/videos/5203828" target="_blank">тв</a>
+  </div>
+  <div class="historyEntry">
+    XboxRU
+    //
+    Halo 5: Guardians
+    <a href="https://www.twitch.tv/videos/22681841" target="_blank">тв</a>
+  </div>
+  <div class="historyEntry">
+    XboxRU
+    //
+    Batman: Arkham Knight
+    <a href="https://www.twitch.tv/videos/6815114" target="_blank">тв</a>
+  </div>
+  <div class="historyEntry">
+    XboxRU
+    //
+    Quantum Break
+    <a href="https://www.twitch.tv/videos/58795554" target="_blank">тв</a>
+  </div>
+  <div class="historyEntry">
+    XboxRU
+    //
+    Overwatch Beta
+    <a href="https://www.twitch.tv/videos/64736484" target="_blank">тв</a>
+  </div>
+  <div class="historyEntry">
+    XboxRU
+    //
+    The Division
+    <a href="https://www.twitch.tv/videos/53758852" target="_blank">тв</a>
+  </div>
+  <div class="historyEntry">
+    XboxRU
+    //
+    Mass Effect 1
+    <a href="https://www.twitch.tv/videos/63713902" target="_blank">тв</a>
+  </div>
+  <div class="historyEntry">
+    XboxRU
+    //
+    Alan Wake
+    <a href="https://www.twitch.tv/videos/59157310" target="_blank">тв</a>
+  </div>
+  <div class="historyEntry">
+    XboxRU
+    //
+    Quantum Break
+    <a href="https://www.twitch.tv/videos/58791424" target="_blank">тв</a>
+  </div>
+  <div class="historyEntry">
+    XboxRU
+    //
+    The Division
+    <a href="https://www.twitch.tv/videos/60167948" target="_blank">тв</a>
+  </div>
+  <div class="historyEntry">
+    XboxRU
+    //
+    Witcher 3
+    <a href="https://vkvideo.ru/video-236820127_456239018" target="_blank">vk</a>
+  </div>
+  <div class="historyEntry">
+    XboxRU
+    //
+    Mass Effect 1
+    <a href="https://www.twitch.tv/videos/63787119" target="_blank">тв</a>
+  </div>
+  <div class="historyEntry">
+    XboxRU: Зуев, Белкин
+    //
+    Doom 2016
+    <a href="https://www.twitch.tv/videos/67555221" target="_blank">тв</a>
+  </div>
+  <div class="historyEntry">
+    XboxRU
+    //
+    Fallout 4
+    <a href="https://www.twitch.tv/videos/70309289" target="_blank">тв</a>
+  </div>
+  <div class="historyEntry">
+    Февраут, день 41. New Vegas, ФИНАЛ
+    //
+    Fallout New Vegas P20
+    <a href="https://live.vkvideo.ru/viktorzu/record/efdb05fd-a0dc-4ee2-b510-8bf0f155681d" target="_blank">вк</a>
+  </div>
+  <div class="historyEntry">
+    XboxRU: Зуев, Загудаев
+    //
+    Battletoads (Rare Replay)
+    <a href="https://www.twitch.tv/videos/10668969" target="_blank">тв</a>
+  </div>
+  <div class="historyEntry">
+    XboxRU
+    //
+    Mass Effect 1
+    <a href="https://www.twitch.tv/videos/62964167" target="_blank">тв</a>
+  </div>
+  <div class="historyEntry">
+    XboxRU: Зуев, Тахакаро
+    //
+    Dark Souls III
+    <a href="https://www.twitch.tv/videos/61976780" target="_blank">тв</a>
+  </div>
+  <div class="historyEntry">
+    XboxRU
+    //
+    SMITE
+    <a href="https://www.twitch.tv/videos/63358879" target="_blank">тв</a>
+  </div>
+  <div class="historyEntry">
+    XboxRU
+    //
+    Batman: Arkham Knight
+    <a href="https://vkvideo.ru/video-236820127_456239017" target="_blank">vk</a>
+  </div>
+  <div class="historyEntry">
+    XboxRU
+    //
+    Divinity: Original Sin
+    <a href="https://www.twitch.tv/videos/23035254" target="_blank">тв</a>
+  </div>
+  <div class="historyEntry">
+    XboxRU: Зуев, Загудаев
+    //
+    Doom 2016
+    <a href="https://www.twitch.tv/videos/66183574" target="_blank">тв</a>
+  </div>
+  <div class="historyEntry">
+    XboxRU
+    //
+    The Witcher 3
+    <a href="https://www.twitch.tv/videos/65849084" target="_blank">тв</a>
+  </div>
+  <div class="historyEntry">
+    XboxRU
+    //
+    Fallout 4
+    <a href="https://www.twitch.tv/videos/70298916" target="_blank">тв</a>
+  </div>
+  <div class="historyEntry">
+    XboxRU: Зуев, Загудаев
+    //
+    Battletoads (Rare Replay)
+    <a href="https://www.twitch.tv/videos/10669791" target="_blank">тв</a>
+  </div>
+  <div class="historyEntry">
+    XboxRU: Зуев и Сальников
+    //
+    Gears of War 4 beta
+    <a href="https://www.twitch.tv/videos/61599336" target="_blank">тв</a>
+  </div>
+  <div class="historyEntry">
+    XboxRU: Зуев, Белкин
+    //
+    The Division
+    <a href="https://www.twitch.tv/videos/59565261" target="_blank">тв</a>
+  </div>
+  <div class="historyEntry">
+    XboxRU
+    //
+    SMITE
+    <a href="https://www.twitch.tv/videos/63340818" target="_blank">тв</a>
+  </div>
+  <div class="historyEntry">
+    XboxRU
+    //
+    Batman: Arkham Knight
+    <a href="https://www.twitch.tv/videos/6813563" target="_blank">тв</a>
+  </div>
+  <div class="historyEntry">
+    XboxRU
+    //
+    Doom 2016
+    <a href="https://www.twitch.tv/videos/61002841" target="_blank">тв</a>
+  </div>
+  <div class="historyEntry">
+    XboxRU
+    //
+    Fallout 4
+    <a href="https://www.twitch.tv/videos/70319847" target="_blank">тв</a>
+  </div>
+  <div class="historyEntry">
+    XboxRU
+    //
+    The Witcher 3 Blood and Wine
+    <a href="https://www.twitch.tv/videos/69732278" target="_blank">тв</a>
+  </div>
+  <div class="historyEntry">
+    XboxRU: Зуев, Черных
+    //
+    Battleborn
+    <a href="https://www.twitch.tv/videos/60555602" target="_blank">тв</a>
+  </div>
+  <h2>2026-03-18</h2>
+  <div class="historyEntry">
+    Виктор Зуев
+    //
+    Ancestors Legacy
+    <a href="https://www.youtube.com/watch?v=14Mr1x7lmkY" target="_blank">ют</a>
+  </div>
+  <div class="historyEntry">
+    Загудаев, Зуев, Сальников. Партнерский стрим
+    //
+    Forza Motorsport 7
+    <a href="https://www.youtube.com/watch?v=aRr9YYdWUms" target="_blank">ют</a>
+  </div>
+  <div class="historyEntry">
+    Секреты Лос-Анджелеса c Зуевым и Загудаевым. Part 8 ФИНАЛ
+    //
+    LA Noire
+    <a href="https://www.youtube.com/watch?v=xSViefNEl6Q" target="_blank">ют</a>
+  </div>
+  <div class="historyEntry">
+    Road to World Cup 2018
+    //
+    Football Manager 2018 ч. 4
+    <a href="https://www.youtube.com/watch?v=Ng8MvIM6Auk" target="_blank">ют</a>
+  </div>
+  <div class="historyEntry">
+    Февраут, день 40. New Vegas, дорога к финалу, часть вторая
+    //
+    Fallout New Vegas P19
+    <a href="https://live.vkvideo.ru/viktorzu/record/851ab186-e9a6-4069-a6ad-3a118d2f2c59" target="_blank">вк</a>
+  </div>
+  <div class="historyEntry">
+    Настольная Вторая мировая с Зуевым, Мурадяном и Сальниковым
+    //
+    Генералы
+    <a href="https://www.youtube.com/watch?v=ldw0Dmjk2lU" target="_blank">ют</a>
+  </div>
+  <div class="historyEntry">
+    Глубокая аналитика на диски
+    //
+    Разбираем коллекцию Виктора Зуева
+    <a href="https://www.youtube.com/watch?v=GXs8HsjLymc" target="_blank">ют</a>
+  </div>
+  <div class="historyEntry">
+    Секреты Лос-Анджелеса c Зуевым и Загудаевым. Part 4
+    //
+    LA Noire
+    <a href="https://www.youtube.com/watch?v=qjWDOru2xXU" target="_blank">ют</a>
+  </div>
+  <div class="historyEntry">
+    Отвратительные и ЖВС
+    //
+    E3 2018 пресс конференция Microsoft
+    <a href="https://www.youtube.com/watch?v=zhVAxXkwx7w" target="_blank">ют</a>
+  </div>
+  <div class="historyEntry">
+    В. Зуев, А. Загудаев
+    //
+    Jurassic World Evolution
+    <a href="https://www.youtube.com/watch?v=KgZfjsbhPqc" target="_blank">ют</a>
+  </div>
+  <div class="historyEntry">
+    Секреты Лос-Анджелеса c Зуевым и Загудаевым. Part 7
+    //
+    LA Noire
+    <a href="https://www.youtube.com/watch?v=n2RgTI2jJ_g" target="_blank">ют</a>
+  </div>
+  <div class="historyEntry">
+    В. Зуев, А. Загудаев
+    //
+    Vampyr
+    <a href="https://www.youtube.com/watch?v=WVUhLyyrHd8" target="_blank">ют</a>
+  </div>
+  <div class="historyEntry">
+    Готовимся к ЧМ по футболу, часть 2
+    //
+    Football Manager 2018 ч. 2
+    <a href="https://www.youtube.com/watch?v=o1nPp1mj_do" target="_blank">ют</a>
+  </div>
+  <div class="historyEntry">
+    Секреты Лос-Анджелеса c Зуевым и Загудаевым. Part 6
+    //
+    LA Noire
+    <a href="https://www.youtube.com/watch?v=DqI4uRv_5f0" target="_blank">ют</a>
+  </div>
+  <div class="historyEntry">
+    Настольная Вторая мировая с Зуевым, Мурадяном и Сальниковым
+    //
+    Генералы
+    <a href="https://dzen.ru/video/watch/61ee98efd434af020f5fdcdf" target="_blank">дзен</a>
+  </div>
+  <div class="historyEntry">
+    Как собрать топовый ПК, если у тебя лапки
+    //
+    PC Building Simulator
+    <a href="https://www.youtube.com/watch?v=24NDjPP9AUc" target="_blank">ют</a>
+  </div>
+  <div class="historyEntry">
+    Диалоги о рыбалке
+    //
+    Русская рыбалка 4
+    <a href="https://www.youtube.com/watch?v=4Q4D8heeCdE" target="_blank">ют</a>
+  </div>
+  <div class="historyEntry">
+    В. Зуев, А. Скочок
+    //
+    PUBG на Xbox One X
+    <a href="https://www.youtube.com/watch?v=8D2syMsnH_k" target="_blank">ют</a>
+  </div>
+  <div class="historyEntry">
+    Отвратительные и ЖВС
+    //
+    E3 2018 пресс конференция Bethesda
+    <a href="https://www.youtube.com/watch?v=nWfqPSgxUbE" target="_blank">ют</a>
+  </div>
+  <div class="historyEntry">
+    [DM]За Императора!
+    //
+    Warhammer 40,000: Gladius – Relics of War
+    <a href="https://www.youtube.com/watch?v=OLtRF-tQ4HQ" target="_blank">ют</a>
+  </div>
+  <div class="historyEntry">
+    Виктор Зуев и Петр Сальников играют в Crossout
+    //
+    Crossout
+    <a href="https://www.youtube.com/watch?v=h8G3CGMaJgA" target="_blank">ют</a>
+  </div>
+  <div class="historyEntry">
+    Отвратительные и ЖВС
+    //
+    E3 2018 пресс конференция Electronic Arts
+    <a href="https://www.youtube.com/watch?v=xDDaopAcpwc" target="_blank">ют</a>
+  </div>
+  <div class="historyEntry">
+    Секреты Лос-Анджелеса c Зуевым и Загудаевым. Part 5
+    //
+    LA Noire
+    <a href="https://www.youtube.com/watch?v=5nF9FMLuB88" target="_blank">ют</a>
+  </div>
+  <div class="historyEntry">
+    Подготовка к ЧМ по футболу. Часть 3!
+    //
+    Football Manager 2018 ч. 3
+    <a href="https://www.youtube.com/watch?v=DZBOSQF6uXM" target="_blank">ют</a>
+  </div>
+  <div class="historyEntry">
+    Готовимся к ЧМ-2018
+    //
+    Football Manager 2018 ч. 6
+    <a href="https://www.youtube.com/watch?v=k7MFdktNFOU" target="_blank">ют</a>
+  </div>
+  <div class="historyEntry">
+    Ancestors Legacy со зрителями
+    //
+    Ancestors Legacy
+    <a href="https://www.youtube.com/watch?v=GtHr8-G4sL8" target="_blank">ют</a>
+  </div>
+  <div class="historyEntry">
+    В. Зуев, А. Загудаев
+    //
+    South Park: The Fractured But Whole
+    <a href="https://www.youtube.com/watch?v=Cm6xH4e4P-c" target="_blank">ют</a>
+  </div>
+  <div class="historyEntry">
+    В. Зуев, А. Загудаев
+    //
+    The Awesome Adventures of Captain Spirit
+    <a href="https://www.youtube.com/watch?v=L_Ke15EPUPg" target="_blank">ют</a>
+  </div>
+  <div class="historyEntry">
+    В. Зуев, А. Загудаев
+    //
+    Обзор магазина Xbox
+    <a href="https://www.youtube.com/watch?v=L_Ke15EPUPg" target="_blank">ют</a>
+  </div>
+  <div class="historyEntry">
+    Глубокая аналитика на диски V
+    //
+    Коллекция Андрея Загудаева
+    <a href="https://www.youtube.com/watch?v=subMcqNk4c0" target="_blank">ют</a>
+  </div>
+  <h2>2026-03-17</h2>
+  <div class="historyEntry">
+    Февраут, день 38. New Vegas, затем Кино с Андреем Загудаевым, ВОЗМОЖНО!!!
+    //
+    Fallout New Vegas P17
+    <a href="https://live.vkvideo.ru/viktorzu/record/012df029-fd62-46f5-95e2-32c35b1d9757" target="_blank">вк</a>
+  </div>
+  <div class="historyEntry">
+    Февраут, день 39. New Vegas, дорога к финалу
+    //
+    Fallout New Vegas P18
+    <a href="https://live.vkvideo.ru/viktorzu/record/6987ece3-3c80-4b19-8731-1e1d310180f6" target="_blank">вк</a>
+  </div>
+  <div class="historyEntry">
+    Февраут, день 38. New Vegas, затем Кино с Андреем Загудаевым, ВОЗМОЖНО!!!
+    //
+    Аукцион
+    <a href="https://live.vkvideo.ru/viktorzu/record/b7cf9e19-762b-4b00-902c-b7d8115e6a43" target="_blank">вк</a>
+  </div>
+  <div class="historyEntry">
+    Февраут, день 38. New Vegas, затем Кино с Андреем Загудаевым, ВОЗМОЖНО!!!
+    //
+    Рай и ад 1963
+    <a href="https://live.vkvideo.ru/viktorzu/record/b7cf9e19-762b-4b00-902c-b7d8115e6a43" target="_blank">вк</a>
+  </div>
+  <div class="historyEntry">
+    Февраут, день 38. New Vegas, затем Кино с Андреем Загудаевым, ВОЗМОЖНО!!!
+    //
+    Аукцион
+    <a href="https://live.vkvideo.ru/viktorzu/record/b7cf9e19-762b-4b00-902c-b7d8115e6a43" target="_blank">вк</a>
+  </div>
+  <div class="historyEntry">
+    Февраут, день 38. New Vegas, затем Кино с Андреем Загудаевым, ВОЗМОЖНО!!!
+    //
+    Бэтмен навсегда 1995
+    <a href="https://live.vkvideo.ru/viktorzu/record/b7cf9e19-762b-4b00-902c-b7d8115e6a43" target="_blank">вк</a>
+  </div>
+  <h2>2026-03-16</h2>
+  <div class="historyEntry">
+    Тополиный пух, жара, июль. Сидим с Анатоличем
+    //
+    Life and Suffering of Sir Brante
+    <a href="https://www.youtube.com/watch?v=CA5o9abO2kc" target="_blank">ют</a>
+  </div>
+  <h2>2026-03-14</h2>
+  <div class="historyEntry">
+    Февраут, день 37. New Vegas, затем Кино с Андреем Загудаевым
+    //
+    Fallout New Vegas P16
+    <a href="https://live.vkvideo.ru/viktorzu/record/07adc921-9dd5-4148-a8ef-9202b9142aea" target="_blank">вк</a>
+  </div>
+  <div class="historyEntry">
+    Февраут, день 37. New Vegas, затем Кино с Андреем Загудаевым
+    //
+    Репортаж 2007
+    <a href="https://live.vkvideo.ru/viktorzu/record/07adc921-9dd5-4148-a8ef-9202b9142aea" target="_blank">вк</a>
+  </div>
+  <div class="historyEntry">
+    Февраут, день 37. New Vegas, затем Кино с Андреем Загудаевым
+    //
+    Конан-варвар 1982
+    <a href="https://live.vkvideo.ru/viktorzu/record/07adc921-9dd5-4148-a8ef-9202b9142aea" target="_blank">вк</a>
+  </div>
+  <h2>2026-03-13</h2>
+  <div class="historyEntry">
+    Февраут, день 36. New Vegas
+    //
+    Fallout New Vegas P15
+    <a href="https://live.vkvideo.ru/viktorzu/record/42844859-9391-42e1-9ff7-b4a46ecdf913" target="_blank">вк</a>
+  </div>
+  <div class="historyEntry">
+    Февраут, день 36. New Vegas
+    //
+    Future Game Show
+    <a href="https://live.vkvideo.ru/viktorzu/record/42844859-9391-42e1-9ff7-b4a46ecdf913" target="_blank">вк</a>
+  </div>
+  <div class="footer">
+    Сайт вобще не официальный.
+    <!--Официальный в <a href="https://t.me/Gamesandhistory">телеге</a>.-->
+  </div>
+</div>
+<script src="/static/main.js"></script>
+</body>
+</html>
