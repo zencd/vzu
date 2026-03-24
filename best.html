@@ -8,6 +8,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Tiny5&display=swap" rel="stylesheet">
   <style>
+    :root {
+      /* Menlo for macos, Cascadia Code for windows */
+      --mono: Menlo, Cascadia Code, monospace;
+    }
     * {
       margin: 0;
     }
@@ -25,7 +29,7 @@
     }
     body {
       background-color: rgb(65, 59, 74);
-      background-image: url(/static/drazi.blur.png);
+      background-image: url(/static/drazi.blur.sm.jpg);
       background-size: cover;
       background-repeat: no-repeat;
       background-attachment: fixed;
@@ -44,10 +48,10 @@
     }
     .topHeader {
       height: 32px;
-      font-family: monospace;
+      font-family: var(--mono);
+      font-size: 13px;
     }
     .topHeader a {
-      font-weight: bold;
       color: #222;
       color: #eed;
     }
@@ -55,19 +59,19 @@
       color: #ffa;
     }
     .wanted {
-      font-family: monospace;
+      font-family: var(--mono);
       font-size: 12px;
       line-height: 16px;
       color: white;
     }
     .history {
-      font-family: monospace;
+      font-family: var(--mono);
       font-size: 12px;
       line-height: 16px;
       color: white;
     }
     select {
-      font-family: monospace;
+      font-family: var(--mono);
       xbackground-color: transparent;
       color: #222;
     }
@@ -113,7 +117,7 @@
       padding-left: 0;
     }
     li {
-      font-family: monospace;
+      font-family: var(--mono);
       font-size: 12px;
       line-height: 32px;
       text-transform: uppercase;
@@ -130,7 +134,7 @@
     .footer {
       xcolor: #888;
       margin-top: 16px;
-      font-family: monospace;
+      font-family: var(--mono);
       font-size: 10px;
       line-height: 32px;
     }

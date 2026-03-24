@@ -8,6 +8,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Tiny5&display=swap" rel="stylesheet">
   <style>
+    :root {
+      /* Menlo for macos, Cascadia Code for windows */
+      --mono: Menlo, Cascadia Code, monospace;
+    }
     * {
       margin: 0;
     }
@@ -25,7 +29,7 @@
     }
     body {
       background-color: rgb(65, 59, 74);
-      background-image: url(/static/drazi.blur.png);
+      background-image: url(/static/drazi.blur.sm.jpg);
       background-size: cover;
       background-repeat: no-repeat;
       background-attachment: fixed;
@@ -44,10 +48,10 @@
     }
     .topHeader {
       height: 32px;
-      font-family: monospace;
+      font-family: var(--mono);
+      font-size: 13px;
     }
     .topHeader a {
-      font-weight: bold;
       color: #222;
       color: #eed;
     }
@@ -55,19 +59,19 @@
       color: #ffa;
     }
     .wanted {
-      font-family: monospace;
+      font-family: var(--mono);
       font-size: 12px;
       line-height: 16px;
       color: white;
     }
     .history {
-      font-family: monospace;
+      font-family: var(--mono);
       font-size: 12px;
       line-height: 16px;
       color: white;
     }
     select {
-      font-family: monospace;
+      font-family: var(--mono);
       xbackground-color: transparent;
       color: #222;
     }
@@ -113,7 +117,7 @@
       padding-left: 0;
     }
     li {
-      font-family: monospace;
+      font-family: var(--mono);
       font-size: 12px;
       line-height: 32px;
       text-transform: uppercase;
@@ -130,7 +134,7 @@
     .footer {
       xcolor: #888;
       margin-top: 16px;
-      font-family: monospace;
+      font-family: var(--mono);
       font-size: 10px;
       line-height: 32px;
     }
@@ -233,7 +237,7 @@
     
   </div>
   <div class="wanted">
-    Ищу: сериал Горец, <s>Горец 1/2/3</s>, <s>Тёмный рыцарь</s>, Джонни Квест, Война будущего, Восставший из ада, <s>польский Ведьмак</s>.
+    Ищу: сериал Горец, <s>Горец 1/2/3</s>, <s>Тёмный рыцарь</s>, Джонни Квест '64, Война будущего, Восставший из ада '22, <s>польский Ведьмак</s>.
     Пишите в <a href="https://fuckthebots.com/" id="pmLink">телегу</a> если хотите поделиться ими с общественностью.
     <a href="https://t.me/ViktorZuStreams" target="_blank">Вавилон 5</a> доступен отдельно.
   </div>
@@ -13131,7 +13135,28 @@
     <ol>
       <li class="chapter" data-tags="series">
         <span class="icon">📺</span>
-        Ведьмак 2002
+        Ведьмак 1/4 2002
+
+
+            <span class="tag">#сериал</span>
+      </li>
+      <li class="chapter" data-tags="series">
+        <span class="icon">📺</span>
+        Ведьмак 2/4 2002
+
+
+            <span class="tag">#сериал</span>
+      </li>
+      <li class="chapter" data-tags="series">
+        <span class="icon">📺</span>
+        Ведьмак 3/4 2002
+
+
+            <span class="tag">#сериал</span>
+      </li>
+      <li class="chapter" data-tags="series">
+        <span class="icon">📺</span>
+        Ведьмак 4/4 2002
 
 
             <span class="tag">#сериал</span>
@@ -17391,7 +17416,7 @@
     </ol>
   </div>
   <div class="stream" data-tags="game zagi">
-    <h2>2017.01.23 Виктор Зуев и Андрей Загудаев в Max Payne 3</h2>
+    <h2>2017.01.23 Виктор Зуев и Андрей Загудаев</h2>
     <ol>
       <li class="chapter" data-tags="game zagi">
         <span class="icon">🎮</span>
@@ -17502,7 +17527,7 @@
     <ol>
       <li class="chapter" data-tags="game zagi">
         <span class="icon">🎮</span>
-        LA Noire
+        LA Noire, нарезка
 
         <a href="https://www.youtube.com/watch?v=m1kMm8-bDqQ" target="_blank">ют</a>
 
@@ -17516,7 +17541,7 @@
     <ol>
       <li class="chapter" data-tags="game">
         <span class="icon">🎮</span>
-        Space Hulk: Deathwing
+        Space Hulk: Deathwing, нарезка
 
         <a href="https://www.youtube.com/watch?v=BU2g4PIa3v8" target="_blank">ют</a>
 
@@ -17529,7 +17554,7 @@
     <ol>
       <li class="chapter" data-tags="game zagi">
         <span class="icon">🎮</span>
-        The Last Guardian
+        The Last Guardian, нарезка
 
         <a href="https://www.youtube.com/watch?v=7eaD4m6qDQQ" target="_blank">ют</a>
 
@@ -17543,7 +17568,7 @@
     <ol>
       <li class="chapter" data-tags="game zagi">
         <span class="icon">🎮</span>
-        LA Noire
+        LA Noire, нарезка
 
         <a href="https://www.youtube.com/watch?v=1MMfXZlftlw" target="_blank">ют</a>
 
@@ -19337,7 +19362,7 @@
       </li>
     </ol>
   </div>
-  <div class="stream" data-tags="cartoon">
+  <div class="stream" data-tags="cartoon film">
     <h2>1970.01.01 Дата неизвестна</h2>
     <ol>
       <li class="chapter" data-tags="cartoon">
@@ -19346,6 +19371,13 @@
 
 
             <span class="tag">#мульт</span>
+      </li>
+      <li class="chapter" data-tags="film">
+        <span class="icon">🎬</span>
+        Фантомас
+
+
+            <span class="tag">#кино</span>
       </li>
     </ol>
   </div>

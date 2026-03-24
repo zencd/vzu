@@ -2,15 +2,17 @@
   'use strict';
   const log = console.log
   const $tagSelect = document.getElementById('tagSelect')
-  $tagSelect.addEventListener('change', function() {
-    const tag = $tagSelect.value
-    if (tag) {
-      filterStreamsByTag(tag)
-    } else {
-      clearTagSelection()
-    }
-    $tagSelect.blur()
-  })
+  if ($tagSelect) {
+    $tagSelect.addEventListener('change', function() {
+      const tag = $tagSelect.value
+      if (tag) {
+        filterStreamsByTag(tag)
+      } else {
+        clearTagSelection()
+      }
+      $tagSelect.blur()
+    })
+  }
   function filterStreamsByTag(tag) {
     var $streams = document.querySelectorAll('.stream').forEach($stream => {
       const streamTagSet = new Set($stream.getAttribute('data-tags').split(' '))
