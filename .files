@@ -8,5 +8,10 @@ static/bg.jpg
 static/drazi.blur.png
 static/drazi.blur.sm.jpg
 static/drazi.jpg
+static/icon/about.txt
+static/icon/apple-touch-icon.png
+static/icon/favicon-16x16.png
+static/icon/favicon-32x32.png
+static/icon/favicon.ico
 static/main.css
 static/main.js

@@ -44,7 +44,8 @@
     element.style.animation = 'spin360 1s linear infinite';
   }
 
-  document.querySelector('.refreshDataBadge').addEventListener('click', e => {startSpinning(e.target)})
+  const refreshDataBadge = document.querySelector('.refreshDataBadge')
+  if (refreshDataBadge) refreshDataBadge.addEventListener('click', e => {startSpinning(e.target)})
   const $hasNewDataBadge = document.querySelector('.hasNewDataBadge')
   if ($hasNewDataBadge) {
     $hasNewDataBadge.addEventListener('click', e => {startSpinning(e.target)})
