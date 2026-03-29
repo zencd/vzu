@@ -9,10 +9,12 @@
   <link rel="icon" type="image/png" sizes="16x16" href="/static/icon1/16px.png">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Tiny5&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Handjet&display=swap" rel="stylesheet">
   <style>
     :root {
       /* Menlo for macos, Cascadia Code for windows */
       --head: "Tiny5", sans-serif;
+      --head: "Handjet", sans-serif;
       --mono: Menlo, Cascadia Code, monospace;
     }
     * {
@@ -80,12 +82,14 @@
     }
     h1 {
       font-family: var(--head);
-      font-size: 32px;
+      font-size: 36px;
       line-height: 32px;
       xcolor: #444;
       xcolor: #964b00;
       xcolor: #ffa;
       margin: 16px 0;
+
+      xfont-weight: 600;
 
       xbackground: -webkit-linear-gradient(0.25turn, #faa, #ffa);
       x-webkit-background-clip: text;
@@ -102,7 +106,7 @@
     }
     h2 {
       font-family: var(--head);
-      font-size: 24px;
+      font-size: 27px;
       line-height: 32px;
       font-weight: 400;
       margin: 16px 0;
@@ -113,7 +117,8 @@
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
 
-      letter-spacing: -1px;
+      xletter-spacing: -1px;
+      xtext-transform: uppercase;
     }
     ol {
       margin-left: 0;
@@ -121,7 +126,7 @@
     }
     li {
       font-family: var(--mono);
-      font-size: 12px;
+      font-size: 13px;
       line-height: 32px;
       text-transform: uppercase;
       letter-spacing: 2px;
