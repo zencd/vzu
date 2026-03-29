@@ -99,6 +99,7 @@
       text-decoration: none;
       color: #dcdcdc !important;
     }
+    h1 a span { display: inline; }
     h1:hover {
       background: -webkit-linear-gradient(0.25turn, #ffa, #ffa);
       -webkit-background-clip: text;
@@ -180,8 +181,10 @@
         margin-bottom: 0;
         padding: 16px 6px;
       }
+      h1 a span { display: block; }
       h2 {
-        font-size: 22px;
+        font-size: 24px;
+        xoutline: 1px solid red;
       }
     }
   </style>
@@ -208,7 +211,7 @@
 </head>
 <body>
 <div class="main1">
-  <h1><a href=".">Виктор Зуев, начинающий стример</a></h1>
+  <h1><a href=".">Виктор Зуев,<span> начинающий стример</span></a></h1>
   <script>
     const flashMsg = '';
     const flashColor = '';
