@@ -16,6 +16,8 @@
       --head: "Tiny5", sans-serif;
       --head: "Handjet", sans-serif;
       --mono: Menlo, Cascadia Code, monospace;
+      --menu-a-color: #eed;
+      --a-hover: #ffa;
     }
     * {
       margin: 0;
@@ -30,7 +32,7 @@
       color: #d055d0;
     }
     a:hover {
-      color: #ffa;
+      color: var(--a-hover);
     }
     body {
       background-color: rgb(65, 59, 74);
@@ -57,11 +59,10 @@
       font-size: 13px;
     }
     .topHeader a {
-      color: #222;
-      color: #eed;
+      color: var(--menu-a-color);
     }
     .topHeader a:hover {
-      color: #ffa;
+      color: var(--a-hover);
     }
     .wanted {
       font-family: var(--mono);
@@ -77,23 +78,17 @@
     }
     select {
       font-family: var(--mono);
-      xbackground-color: transparent;
-      color: #222;
+      background-color: transparent;
+      color: var(--menu-a-color);
+    }
+    select:hover {
+      color: var(--a-hover);
     }
     h1 {
       font-family: var(--head);
       font-size: 36px;
       line-height: 32px;
-      xcolor: #444;
-      xcolor: #964b00;
-      xcolor: #ffa;
       margin: 16px 0;
-
-      xfont-weight: 600;
-
-      xbackground: -webkit-linear-gradient(0.25turn, #faa, #ffa);
-      x-webkit-background-clip: text;
-      x-webkit-text-fill-color: transparent;
     }
     h1 a {
       text-decoration: none;
@@ -117,9 +112,6 @@
       background: -webkit-linear-gradient(0.25turn, #faa, #ffa);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-
-      xletter-spacing: -1px;
-      xtext-transform: uppercase;
     }
     ol {
       margin-left: 0;
@@ -184,7 +176,6 @@
       h1 a span { display: block; }
       h2 {
         font-size: 24px;
-        xoutline: 1px solid red;
       }
     }
   </style>
@@ -260,22 +251,30 @@
     <a href="https://live.vkvideo.ru/viktorzu?tab=records" target="_blank">Вк</a>
     <a href="https://boosty.to/viktorzu" target="_blank">Бусти</a>
     <a href="./best.html">Лучшее</a>
-    <a href="./log.html" style="color: #ffa;">Новое</a>
+    <a href="./log.html">Новое</a>
     <a href="./links.html">Ссылки</a>
     
   </div>
   <div class="wanted">
-    Ищу: сериал Горец, Джонни Квест '64, Война будущего, Восставший из ада '22, Герои галактики 5-7, Вавилон 5 s5 9-11.
+    Ищу:
+    сериал Горец,
+    Вавилон 5 s5 9-11,
+    Герои галактики 5-7,
+    Джонни Квест '64,
+    Война будущего,
+    В августе 44-го,
+    Восставший из ада '22.
     Пишите в <a href="https://fuckthebots.com/" id="pmLink">телегу</a> если хотите поделиться ими с общественностью.
     <a href="https://t.me/ViktorZuStreams" target="_blank">Вавилон 5</a> доступен отдельно.
   </div>
   <div class="stream" data-tags="game">
-    <h2>2026.03.30 Февраут, день 53... на ВК техработы, ок, но на Твиче тоже не сохранился 🤷‍♂️</h2>
+    <h2>2026.03.30 Февраут, день 53</h2>
     <ol>
       <li class="chapter" data-tags="game">
         <span class="icon">🎮</span>
         Fallout 4
 
+        <a href="https://www.twitch.tv/videos/2735575884" target="_blank">тв</a>
 
             <span class="tag">#игра</span>
       </li>
@@ -4080,12 +4079,57 @@
       </li>
     </ol>
   </div>
-  <div class="stream" data-tags="film game">
+  <div class="stream" data-tags="film game talk">
     <h2>2025.03.28 Вспоминаем лучшие дни Близзард, далее смотрим что-нить</h2>
     <ol>
+      <li class="chapter" data-tags="talk">
+        <span class="icon">💬</span>
+        Старые игры Blizzard
+
+        <a href="https://live.vkvideo.ru/viktorzu/record/9d083e47-6ba2-43eb-af03-b62413daf656" target="_blank">вк</a>
+        <a href="https://www.youtube.com/watch?v=UnW6BephFQU" target="_blank">ют</a>
+
+            <span class="tag">#общение</span>
+      </li>
       <li class="chapter" data-tags="game">
         <span class="icon">🎮</span>
-        Старые игры Blizzard
+        RPM Racing
+
+        <a href="https://live.vkvideo.ru/viktorzu/record/9d083e47-6ba2-43eb-af03-b62413daf656" target="_blank">вк</a>
+        <a href="https://www.youtube.com/watch?v=UnW6BephFQU" target="_blank">ют</a>
+
+            <span class="tag">#игра</span>
+      </li>
+      <li class="chapter" data-tags="game">
+        <span class="icon">🎮</span>
+        The Lost Vikings
+
+        <a href="https://live.vkvideo.ru/viktorzu/record/9d083e47-6ba2-43eb-af03-b62413daf656" target="_blank">вк</a>
+        <a href="https://www.youtube.com/watch?v=UnW6BephFQU" target="_blank">ют</a>
+
+            <span class="tag">#игра</span>
+      </li>
+      <li class="chapter" data-tags="game">
+        <span class="icon">🎮</span>
+        Rock n&#039; Roll Racing
+
+        <a href="https://live.vkvideo.ru/viktorzu/record/9d083e47-6ba2-43eb-af03-b62413daf656" target="_blank">вк</a>
+        <a href="https://www.youtube.com/watch?v=UnW6BephFQU" target="_blank">ют</a>
+
+            <span class="tag">#игра</span>
+      </li>
+      <li class="chapter" data-tags="game">
+        <span class="icon">🎮</span>
+        Blackthorne
+
+        <a href="https://live.vkvideo.ru/viktorzu/record/9d083e47-6ba2-43eb-af03-b62413daf656" target="_blank">вк</a>
+        <a href="https://www.youtube.com/watch?v=UnW6BephFQU" target="_blank">ют</a>
+
+            <span class="tag">#игра</span>
+      </li>
+      <li class="chapter" data-tags="game">
+        <span class="icon">🎮</span>
+        Lost Vikings 2
 
         <a href="https://live.vkvideo.ru/viktorzu/record/9d083e47-6ba2-43eb-af03-b62413daf656" target="_blank">вк</a>
         <a href="https://www.youtube.com/watch?v=UnW6BephFQU" target="_blank">ют</a>
@@ -4097,7 +4141,6 @@
         Хитмэн Агент 47 2015
 
         <a href="https://live.vkvideo.ru/viktorzu/record/9d083e47-6ba2-43eb-af03-b62413daf656?tc=16800" target="_blank">вк</a>
-        <a href="https://www.youtube.com/watch?v=UnW6BephFQU" target="_blank">ют</a>
 
             <span class="tag">#кино</span>
       </li>
@@ -10058,7 +10101,7 @@
     <ol>
       <li class="chapter" data-tags="film">
         <span class="icon">🎬</span>
-        Подземелья и драконы: Честь среди воров
+        Подземелья и драконы: Честь среди воров 2023
 
         <a href="https://boosty.to/viktorzu/posts/3bce28d9-8d12-4cc8-a0c3-3db48ed6dd1c" target="_blank">бусти</a>
 

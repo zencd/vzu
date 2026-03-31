@@ -16,6 +16,8 @@
       --head: "Tiny5", sans-serif;
       --head: "Handjet", sans-serif;
       --mono: Menlo, Cascadia Code, monospace;
+      --menu-a-color: #eed;
+      --a-hover: #ffa;
     }
     * {
       margin: 0;
@@ -30,7 +32,7 @@
       color: #d055d0;
     }
     a:hover {
-      color: #ffa;
+      color: var(--a-hover);
     }
     body {
       background-color: rgb(65, 59, 74);
@@ -57,11 +59,10 @@
       font-size: 13px;
     }
     .topHeader a {
-      color: #222;
-      color: #eed;
+      color: var(--menu-a-color);
     }
     .topHeader a:hover {
-      color: #ffa;
+      color: var(--a-hover);
     }
     .wanted {
       font-family: var(--mono);
@@ -77,23 +78,17 @@
     }
     select {
       font-family: var(--mono);
-      xbackground-color: transparent;
-      color: #222;
+      background-color: transparent;
+      color: var(--menu-a-color);
+    }
+    select:hover {
+      color: var(--a-hover);
     }
     h1 {
       font-family: var(--head);
       font-size: 36px;
       line-height: 32px;
-      xcolor: #444;
-      xcolor: #964b00;
-      xcolor: #ffa;
       margin: 16px 0;
-
-      xfont-weight: 600;
-
-      xbackground: -webkit-linear-gradient(0.25turn, #faa, #ffa);
-      x-webkit-background-clip: text;
-      x-webkit-text-fill-color: transparent;
     }
     h1 a {
       text-decoration: none;
@@ -117,9 +112,6 @@
       background: -webkit-linear-gradient(0.25turn, #faa, #ffa);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-
-      xletter-spacing: -1px;
-      xtext-transform: uppercase;
     }
     ol {
       margin-left: 0;
@@ -184,7 +176,6 @@
       h1 a span { display: block; }
       h2 {
         font-size: 24px;
-        xoutline: 1px solid red;
       }
     }
   </style>
@@ -239,6 +230,12 @@
 </style>
 <h2>Новые ссылки</h2>
   <h2>2026-03-31</h2>
+  <div class="historyEntry">
+    🎮
+    <span>тв</span>
+    <a href="https://www.twitch.tv/videos/2735575884" target="_blank">Fallout 4</a>
+    <span>Февраут, день 53</span>
+  </div>
   <div class="historyEntry">
     🎬
     <span>vk</span>
