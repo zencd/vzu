@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Виктор Зуев, начинающий стример</title>
+  <meta name="darkreader-lock">
   <link rel="apple-touch-icon" sizes="180x180" href="/static/icon1/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/static/icon1/32px.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/static/icon1/16px.png">
@@ -35,23 +36,31 @@
       color: var(--a-hover);
     }
     body {
-      background-color: rgb(65, 59, 74);
+      background-color: #413B4A;
       background-image: url(/static/drazi.blur.sm.jpg);
       background-size: cover;
       background-repeat: no-repeat;
       background-attachment: fixed;
 
     }
-    .main1 {
-      background-color: rgba(220,200,200,0.3);
-      background-color: rgba(180,160,160,0.3);
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
       backdrop-filter: blur(50px);
       background-color: rgba(90,80,90,0.6);
+      pointer-events: none;
+      max-width: 714px; /* 650 + 32 + 32 */
+      margin: 0 auto;
+      z-index: 0;
+    }
+    .main1 {
+      position: relative;
       max-width: 650px;
       margin: 32px auto 32px auto;
       padding: 32px;
       padding-top: 16px;
-      border-radius: 5px;
+      z-index: 1;
     }
     .topHeader {
       height: 32px;
@@ -84,6 +93,11 @@
     select:hover {
       color: var(--a-hover);
     }
+    select option {
+      /* macos ignores option styling */
+      color: var(--menu-a-color);
+      background-color: #413B4A;
+    }
     h1 {
       font-family: var(--head);
       font-size: 36px;
@@ -93,6 +107,7 @@
     h1 a {
       text-decoration: none;
       color: #dcdcdc !important;
+      font-weight: 400;
     }
     h1 a span { display: inline; }
     h1:hover {
