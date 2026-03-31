@@ -219,6 +219,17 @@
       toast(flashMsg, flashColor)
     }
   </script>
+<style>
+  .extIcon {
+    width: 16px;
+    height: 16px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: inline-block;
+  }
+</style>
   <div class="topHeader">
     <select id="tagSelect">
       <option value="">Фильтры</option>
@@ -238,6 +249,12 @@
         <option value="warhammer">🤷 ваха</option>
         <option value="zagi">🧑 заги</option>
     </select>
+<!--
+    <div class="extIcon" style="background-image: url('/static/img/tg.png')"></div>
+    <div class="extIcon" style="background-image: url('/static/img/tw.png')"></div>
+    <div class="extIcon" style="background-image: url('/static/img/vk.png')"></div>
+    <div class="extIcon" style="background-image: url('/static/img/boosty.png')"></div>
+-->
     <a href="https://t.me/Gamesandhistory" target="_blank">Телега</a>
     <a href="https://www.twitch.tv/viktorzu/videos?filter=archives&sort=time" target="_blank">Твич</a>
     <a href="https://live.vkvideo.ru/viktorzu?tab=records" target="_blank">Вк</a>
@@ -252,6 +269,18 @@
     Пишите в <a href="https://fuckthebots.com/" id="pmLink">телегу</a> если хотите поделиться ими с общественностью.
     <a href="https://t.me/ViktorZuStreams" target="_blank">Вавилон 5</a> доступен отдельно.
   </div>
+  <div class="stream" data-tags="game">
+    <h2>2026.03.30 Февраут, день 53... на ВК техработы, ок, но и на Твиче тоже не сохранился х_х</h2>
+    <ol>
+      <li class="chapter" data-tags="game">
+        <span class="icon">🎮</span>
+        Fallout 4
+
+
+            <span class="tag">#игра</span>
+      </li>
+    </ol>
+  </div>
   <div class="stream" data-tags="film game">
     <h2>2026.03.29 Февраут, день 52. Fallout 4 - лучший?</h2>
     <ol>
@@ -259,8 +288,8 @@
         <span class="icon">🎮</span>
         Fallout 4
 
-        <a href="https://live.vkvideo.ru/viktorzu/record/7ddfec1e-5a3d-4f5e-87fa-6c8cc7647cd3" target="_blank">вк</a>
-        <a href="https://www.twitch.tv/videos/2734688136" target="_blank">тв</a>
+        <a href="https://live.vkvideo.ru/viktorzu/record/7ddfec1e-5a3d-4f5e-87fa-6c8cc7647cd3?tc=0" target="_blank">вк</a>
+        <a href="https://www.youtube.com/watch?v=DPDfEAUZYuE&amp;t=0s" target="_blank">ют</a>
 
             <span class="tag">#игра</span>
       </li>
@@ -268,8 +297,7 @@
         <span class="icon">🎬</span>
         Бандиты во времени 1981
 
-        <a href="https://live.vkvideo.ru/viktorzu/record/7ddfec1e-5a3d-4f5e-87fa-6c8cc7647cd3" target="_blank">вк</a>
-        <a href="https://www.twitch.tv/videos/2734688136" target="_blank">тв</a>
+        <a href="https://live.vkvideo.ru/viktorzu/record/7ddfec1e-5a3d-4f5e-87fa-6c8cc7647cd3?tc=20430" target="_blank">вк</a>
 
             <span class="tag">#кино</span>
       </li>
@@ -277,8 +305,7 @@
         <span class="icon">🎬</span>
         Легенда 1985
 
-        <a href="https://live.vkvideo.ru/viktorzu/record/7ddfec1e-5a3d-4f5e-87fa-6c8cc7647cd3" target="_blank">вк</a>
-        <a href="https://www.twitch.tv/videos/2734688136" target="_blank">тв</a>
+        <a href="https://live.vkvideo.ru/viktorzu/record/7ddfec1e-5a3d-4f5e-87fa-6c8cc7647cd3?tc=27910" target="_blank">вк</a>
 
             <span class="tag">#кино</span>
       </li>
@@ -289,7 +316,7 @@
     <ol>
       <li class="chapter" data-tags="game">
         <span class="icon">🎮</span>
-        Fallout 3 (финал)
+        Fallout 3 финал
 
         <a href="https://live.vkvideo.ru/viktorzu/record/84c31217-dc15-41fc-bb8d-d7ac5c0acc45?tc=300" target="_blank">вк</a>
         <a href="https://www.youtube.com/watch?v=C5l8ZMpy3NI&amp;t=300s" target="_blank">ют</a>
@@ -307,7 +334,6 @@
 
         <a href="https://www.youtube.com/watch?v=uLUpRkH5BRA" target="_blank">ют</a>
         <a href="https://www.youtube.com/watch?v=A8pkj7ENNpY" target="_blank">ют</a>
-        <a href="https://www.twitch.tv/videos/2732915033" target="_blank">тв</a>
 
             <span class="tag">#игра</span>
       </li>
@@ -327,7 +353,7 @@
       </li>
       <li class="chapter" data-tags="series">
         <span class="icon">📺</span>
-        Пираты 3-4/4 1999
+        Пираты 3-4 1999
 
         <a href="https://live.vkvideo.ru/viktorzu/record/78a26bba-702f-4660-bc48-e6590e2a4f05?tc=25920" target="_blank">вк</a>
 
@@ -987,7 +1013,7 @@
     </ol>
   </div>
   <div class="stream" data-tags="game talk">
-    <h2>2026.02.14 Февраут, день 11. Финал второго фолыча и начало нового.</h2>
+    <h2>2026.02.14 Февраут, день 11. Финал второго фолыча и начало нового</h2>
     <ol>
       <li class="chapter" data-tags="game">
         <span class="icon">🎮</span>
@@ -1028,7 +1054,7 @@
     </ol>
   </div>
   <div class="stream" data-tags="film game talk zagi">
-    <h2>2026.02.13 Февраут, день 10. Побеждаем Анклав. Потом Пятница 13 с Андреем Загудаевым.</h2>
+    <h2>2026.02.13 Февраут, день 10. Побеждаем Анклав. Потом Пятница 13 с Андреем Загудаевым</h2>
     <ol>
       <li class="chapter" data-tags="game zagi">
         <span class="icon">🎮</span>
@@ -1070,7 +1096,7 @@
     </ol>
   </div>
   <div class="stream" data-tags="cartoon film game zagi">
-    <h2>2026.02.12 Февраут, день 9. Играем и смотрим кино с Андреем Загудаевым.</h2>
+    <h2>2026.02.12 Февраут, день 9. Играем и смотрим кино с Андреем Загудаевым</h2>
     <ol>
       <li class="chapter" data-tags="game zagi">
         <span class="icon">🎮</span>
@@ -1396,7 +1422,7 @@
     <ol>
       <li class="chapter" data-tags="series">
         <span class="icon">📺</span>
-        Пираты 1-2/4 1999
+        Пираты 1-2 1999
 
         <a href="https://live.vkvideo.ru/viktorzu/record/8ef3d72b-9aea-4524-be86-a86b880d19bd?tc=260" target="_blank">вк</a>
 
@@ -3186,7 +3212,7 @@
     </ol>
   </div>
   <div class="stream" data-tags="film">
-    <h2>2025.07.14 Сидим с Анатоличем. Сиквел.</h2>
+    <h2>2025.07.14 Сидим с Анатоличем. Сиквел</h2>
     <ol>
       <li class="chapter" data-tags="film">
         <span class="icon">🎬</span>
@@ -3602,7 +3628,7 @@
     </ol>
   </div>
   <div class="stream" data-tags="film game">
-    <h2>2025.05.09 Anoxia Station, затем фильмы про ВОВ и ВМВ.</h2>
+    <h2>2025.05.09 Anoxia Station, затем фильмы про ВОВ и ВМВ</h2>
     <ol>
       <li class="chapter" data-tags="game">
         <span class="icon">🎮</span>
@@ -4032,7 +4058,7 @@
     </ol>
   </div>
   <div class="stream" data-tags="film game warhammer">
-    <h2>2025.03.29 Чил-суббота, бьем лица космодесанту, готовим мичеладу. Когда надоест, можно и посмотреть что-нибудь.</h2>
+    <h2>2025.03.29 Чил-суббота, бьем лица космодесанту, готовим мичеладу. Когда надоест, можно и посмотреть что-нибудь</h2>
     <ol>
       <li class="chapter" data-tags="game warhammer">
         <span class="icon">🎮</span>
@@ -4253,7 +4279,7 @@
       </li>
       <li class="chapter" data-tags="film">
         <span class="icon">🎬</span>
-        Чужой против хищника 2004 1/2
+        Чужой против хищника 1/2 2004
 
         <a href="https://live.vkvideo.ru/viktorzu/record/f08d674c-8132-4a3c-af1f-66db8ffde5b3" target="_blank">вк</a>
 
@@ -4261,7 +4287,7 @@
       </li>
       <li class="chapter" data-tags="film">
         <span class="icon">🎬</span>
-        Чужой против хищника 2004 2/2
+        Чужой против хищника 2/2 2004
 
         <a href="https://live.vkvideo.ru/viktorzu/record/128d132c-3bdb-4455-b6f6-3aaeb19e357d" target="_blank">вк</a>
 
@@ -4347,7 +4373,7 @@
     </ol>
   </div>
   <div class="stream" data-tags="cartoon series warhammer">
-    <h2>2025.03.01 Ангелы смерти (7-13 серии), Raptor, Фантагиро или пещера золотой розы 2, Геракл и Амазонки, Скользящие (1 серия).</h2>
+    <h2>2025.03.01 Ангелы смерти (7-13 серии), Raptor, Фантагиро или пещера золотой розы 2, Геракл и Амазонки, Скользящие 1 серия</h2>
     <ol>
       <li class="chapter" data-tags="cartoon warhammer">
         <span class="icon">🐭</span>
@@ -4394,7 +4420,7 @@
       </li>
       <li class="chapter" data-tags="series">
         <span class="icon">📺</span>
-        Скользящие E1
+        Скользящие 1
 
         <a href="https://live.vkvideo.ru/viktorzu/record/046cff55-cb84-4b77-93fa-1dfc58221227" target="_blank">вк</a>
 
@@ -4862,7 +4888,7 @@
     </ol>
   </div>
   <div class="stream" data-tags="cartoon game series talk warhammer">
-    <h2>2024.12.20 Разбираю список заказов на Бусти.</h2>
+    <h2>2024.12.20 Разбираю список заказов на Бусти</h2>
     <ol>
       <li class="chapter" data-tags="talk">
         <span class="icon">💬</span>
@@ -5121,7 +5147,7 @@
     </ol>
   </div>
   <div class="stream" data-tags="series show">
-    <h2>2024.11.18 The Game Awards - обсуждаем номинантов.</h2>
+    <h2>2024.11.18 The Game Awards - обсуждаем номинантов</h2>
     <ol>
       <li class="chapter" data-tags="show">
         <span class="icon">🍿</span>
@@ -5144,7 +5170,7 @@
     </ol>
   </div>
   <div class="stream" data-tags="game">
-    <h2>2024.11.17 Обсуждаем финал Dragon Age: Veilguard. Дальше хз.</h2>
+    <h2>2024.11.17 Обсуждаем финал Dragon Age: Veilguard. Дальше хз</h2>
     <ol>
       <li class="chapter" data-tags="game">
         <span class="icon">🎮</span>
@@ -6364,7 +6390,7 @@
     <ol>
       <li class="chapter" data-tags="film lecture">
         <span class="icon">🎬</span>
-        Властелин колец 1 2001 2/2
+        Властелин колец 1 2/2 2001
 
         <a href="https://live.vkvideo.ru/viktorzu/record/0ae115dc-1c38-47ce-a80e-97c64943b12d?tc=367" target="_blank">вк</a>
         <a href="https://www.youtube.com/watch?v=7vfVqRm4MGg" target="_blank">ют</a>
@@ -6493,7 +6519,7 @@
     <ol>
       <li class="chapter" data-tags="film lecture">
         <span class="icon">🎬</span>
-        Властелин колец 1 2001 1/2
+        Властелин колец 1 1/2 2001
 
         <a href="https://live.vkvideo.ru/viktorzu/record/cc6e0938-89c3-4ec0-9081-1a2c6f155f8b?tc=317" target="_blank">вк</a>
         <a href="https://www.youtube.com/watch?v=ducwlGWiGt4" target="_blank">ют</a>
@@ -6621,7 +6647,7 @@
       </li>
       <li class="chapter" data-tags="anime">
         <span class="icon">👺</span>
-        Реинкарнация безработного S1 14-17
+        Реинкарнация безработного 14-17
 
         <a href="https://live.vkvideo.ru/viktorzu/record/23a44a8a-49b6-40a9-adf6-210ece31c39a?tc=13270" target="_blank">вк</a>
 
@@ -6965,7 +6991,7 @@
       </li>
       <li class="chapter" data-tags="anime">
         <span class="icon">👺</span>
-        Реинкарнация безработного S1 10-13
+        Реинкарнация безработного 10-13
 
         <a href="https://live.vkvideo.ru/viktorzu/record/54bab019-0a10-449e-a332-1885e537f765?tc=15610" target="_blank">вк</a>
 
@@ -7253,7 +7279,7 @@
       </li>
       <li class="chapter" data-tags="anime">
         <span class="icon">👺</span>
-        Реинкарнация безработного S1 6-9
+        Реинкарнация безработного 6-9
 
         <a href="https://live.vkvideo.ru/viktorzu/record/04f05223-4566-4026-a63a-6123dcc016b2?tc=28920" target="_blank">вк</a>
 
@@ -7428,7 +7454,7 @@
     </ol>
   </div>
   <div class="stream" data-tags="film game">
-    <h2>2024.04.19 HSR: выбиваем Авантюрина, затем игра &quot;Чужие: Темный Десерт&quot; и кинофильм &quot;Космическая морская пехота&quot;.</h2>
+    <h2>2024.04.19 HSR: выбиваем Авантюрина, затем игра &quot;Чужие: Темный Десерт&quot; и кинофильм &quot;Космическая морская пехота&quot;</h2>
     <ol>
       <li class="chapter" data-tags="game">
         <span class="icon">🎮</span>
@@ -7460,7 +7486,7 @@
     </ol>
   </div>
   <div class="stream" data-tags="series">
-    <h2>2024.04.17 Сериал Fallout, сколько-то серий.</h2>
+    <h2>2024.04.17 Сериал Fallout, сколько-то серий</h2>
     <ol>
       <li class="chapter" data-tags="series">
         <span class="icon">📺</span>
@@ -7557,7 +7583,7 @@
     </ol>
   </div>
   <div class="stream" data-tags="talk">
-    <h2>2024.04.12 &quot;Смута&quot; - что это было? Разбор по фактам.</h2>
+    <h2>2024.04.12 &quot;Смута&quot; - что это было? Разбор по фактам</h2>
     <ol>
       <li class="chapter" data-tags="talk">
         <span class="icon">💬</span>
@@ -7584,7 +7610,7 @@
       </li>
       <li class="chapter" data-tags="anime">
         <span class="icon">👺</span>
-        Реинкарнация безработного S1 1-5
+        Реинкарнация безработного 1-5
 
         <a href="https://live.vkvideo.ru/viktorzu/record/f701aa8a-d416-4375-bd58-e71c5449ba77?tc=10635" target="_blank">вк</a>
 
@@ -7748,7 +7774,7 @@
       </li>
       <li class="chapter" data-tags="film">
         <span class="icon">🎬</span>
-        Один в темноте 2004 1/2
+        Один в темноте 1/2 2004
 
         <a href="https://live.vkvideo.ru/viktorzu/record/20d33588-f940-4fdd-ad5e-a5070739a982" target="_blank">вк</a>
         <a href="https://www.youtube.com/watch?v=zqSUFXlHtKU&amp;t=5975s" target="_blank">ют</a>
@@ -7757,7 +7783,7 @@
       </li>
       <li class="chapter" data-tags="film">
         <span class="icon">🎬</span>
-        Один в темноте 2004 2/2
+        Один в темноте 2/2 2004
 
         <a href="https://live.vkvideo.ru/viktorzu/record/9b34e8d0-411d-4f7b-828f-1ef012fd6e25" target="_blank">вк</a>
         <a href="https://www.youtube.com/watch?v=zqSUFXlHtKU" target="_blank">ют</a>
@@ -7886,7 +7912,7 @@
     </ol>
   </div>
   <div class="stream" data-tags="game talk">
-    <h2>2024.03.08 Разминка в Кресты, а затем беседа с археологом Василием Новиковым.</h2>
+    <h2>2024.03.08 Разминка в Кресты, а затем беседа с археологом Василием Новиковым</h2>
     <ol>
       <li class="chapter" data-tags="game">
         <span class="icon">🎮</span>
@@ -8788,7 +8814,7 @@
     </ol>
   </div>
   <div class="stream" data-tags="series talk">
-    <h2>2023.11.06 Обсудим Алан Вейка 2. Почитаем новости. Затем - Вавилоныч, 5-ый сезон.</h2>
+    <h2>2023.11.06 Обсудим Алан Вейка 2. Почитаем новости. Затем - Вавилоныч, 5-ый сезон</h2>
     <ol>
       <li class="chapter" data-tags="talk">
         <span class="icon">💬</span>
@@ -8919,7 +8945,7 @@
     </ol>
   </div>
   <div class="stream" data-tags="game">
-    <h2>2023.10.05 Арабская ночь, волшебный восток, здесь чары и месть, отвага и честь.</h2>
+    <h2>2023.10.05 Арабская ночь, волшебный восток, здесь чары и месть, отвага и честь</h2>
     <ol>
       <li class="chapter" data-tags="game">
         <span class="icon">🎮</span>
@@ -9659,7 +9685,7 @@
     </ol>
   </div>
   <div class="stream" data-tags="show">
-    <h2>2023.06.13 Xbox Games Showcase 2023 + starfield direcrt</h2>
+    <h2>2023.06.13 Xbox Games Showcase 2023 + starfield direct</h2>
     <ol>
       <li class="chapter" data-tags="show">
         <span class="icon">🍿</span>
@@ -9671,7 +9697,7 @@
       </li>
       <li class="chapter" data-tags="show">
         <span class="icon">🍿</span>
-        Starfield Direcrt
+        Starfield Direct
 
         <a href="https://www.youtube.com/watch?v=kvoaDOBzvl4&amp;t=4270s" target="_blank">ют</a>
 
@@ -10850,7 +10876,7 @@
     </ol>
   </div>
   <div class="stream" data-tags="game">
-    <h2>2023.02.06 Кто не хочет смотреть ГП - все сюда. Смотрим игры.</h2>
+    <h2>2023.02.06 Кто не хочет смотреть ГП - все сюда. Смотрим игры</h2>
     <ol>
       <li class="chapter" data-tags="game">
         <span class="icon">🎮</span>
@@ -10947,7 +10973,7 @@
     </ol>
   </div>
   <div class="stream" data-tags="game">
-    <h2>2023.01.24 &quot;Санитары подземелий&quot;: La Grand Finale.</h2>
+    <h2>2023.01.24 &quot;Санитары подземелий&quot;: La Grand Finale</h2>
     <ol>
       <li class="chapter" data-tags="game">
         <span class="icon">🎮</span>
@@ -11180,7 +11206,7 @@
     </ol>
   </div>
   <div class="stream" data-tags="game">
-    <h2>2022.12.25 Опиумные войны в Victoria 3 - продолжение. Часть 2.</h2>
+    <h2>2022.12.25 Опиумные войны в Victoria 3 - продолжение. Часть 2</h2>
     <ol>
       <li class="chapter" data-tags="game">
         <span class="icon">🎮</span>
@@ -11193,7 +11219,7 @@
     </ol>
   </div>
   <div class="stream" data-tags="game">
-    <h2>2022.12.25 Опиумные войны в Victoria 3 - продолжение. Часть 1.</h2>
+    <h2>2022.12.25 Опиумные войны в Victoria 3 - продолжение. Часть 1</h2>
     <ol>
       <li class="chapter" data-tags="game">
         <span class="icon">🎮</span>
@@ -11248,7 +11274,7 @@
     </ol>
   </div>
   <div class="stream" data-tags="game">
-    <h2>2022.12.23 Виктор и Виктория Продолжение романа. Часть 2.</h2>
+    <h2>2022.12.23 Виктор и Виктория Продолжение романа. Часть 2</h2>
     <ol>
       <li class="chapter" data-tags="game">
         <span class="icon">🎮</span>
@@ -11365,7 +11391,7 @@
     </ol>
   </div>
   <div class="stream" data-tags="show zagi">
-    <h2>2022.12.17 Новогодний футбол с Андреем З.</h2>
+    <h2>2022.12.17 Новогодний футбол с Андреем З</h2>
     <ol>
       <li class="chapter" data-tags="show zagi">
         <span class="icon">🍿</span>
@@ -11840,7 +11866,7 @@
     </ol>
   </div>
   <div class="stream" data-tags="series">
-    <h2>2022.09.07 Кажется, я догадался, где Amazon спрятали Саурона в сериале ).</h2>
+    <h2>2022.09.07 Кажется, я догадался, где Amazon спрятали Саурона в сериале )</h2>
     <ol>
       <li class="chapter" data-tags="series">
         <span class="icon">📺</span>
@@ -17621,6 +17647,7 @@
         <span class="icon">🎲</span>
         Кровь и ярость / Blood Rage
 
+        <a href="https://www.youtube.com/watch?v=SYmPeA_Yotk" target="_blank">ют</a>
         <a href="https://www.youtube.com/watch?v=GWHGdMKc23g" target="_blank">ют</a>
 
             <span class="tag">#настолки</span>
@@ -17639,19 +17666,6 @@
         <a href="https://www.youtube.com/watch?v=vF32z2sbktE" target="_blank">ют</a>
 
             <span class="tag">#игра</span>
-      </li>
-    </ol>
-  </div>
-  <div class="stream" data-tags="tabletop">
-    <h2>2017.08.03 П. Сальников, В. Зуев, В. Мостицкий, Е. Евдокимова</h2>
-    <ol>
-      <li class="chapter" data-tags="tabletop">
-        <span class="icon">🎲</span>
-        Настолка &quot;Кровь и Ярость&quot;
-
-        <a href="https://www.youtube.com/watch?v=SYmPeA_Yotk" target="_blank">ют</a>
-
-            <span class="tag">#настолки</span>
       </li>
     </ol>
   </div>
@@ -17833,7 +17847,7 @@
     </ol>
   </div>
   <div class="stream" data-tags="game">
-    <h2>2017.06.28 Crossout в платьях: Сальников, Зуев. Осторожно, трапы.</h2>
+    <h2>2017.06.28 Crossout в платьях: Сальников, Зуев. Осторожно, трапы</h2>
     <ol>
       <li class="chapter" data-tags="game">
         <span class="icon">🎮</span>
