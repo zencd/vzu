@@ -19,7 +19,8 @@
       if (streamTagSet.has(tag)) {
         $stream.style.display = 'block'
         $stream.querySelectorAll('.chapter').forEach($chapter => {
-          const chapterTagSet = new Set($chapter.getAttribute('data-tags').split(' '))
+          const tagsStr = $chapter.getAttribute('data-tags') || ''
+          const chapterTagSet = new Set(tagsStr.split(' '))
           if (chapterTagSet.has(tag)) {
             $chapter.style.display = 'block'
           } else {
