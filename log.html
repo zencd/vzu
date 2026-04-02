@@ -49,6 +49,7 @@
       inset: 0;
       backdrop-filter: blur(50px);
       background-color: rgba(90,80,90,0.6);
+      background-color: rgba(70,62,70,0.6);
       pointer-events: none;
       max-width: 714px; /* 650 + 32 + 32 */
       margin: 0 auto;
@@ -179,6 +180,7 @@
     }
     .chapter.comment {
       color: #888;
+      text-transform: lowercase;
     }
     @keyframes spin360 {
       from { transform: rotate(0deg); }
@@ -195,6 +197,25 @@
         font-size: 24px;
       }
     }
+    /*
+    .officialLinks {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 94px;
+      height: 94px;
+      xoutline: 2px solid green;
+    }
+    .officialLinks a {
+      display: inline-block;
+      width: 32px;
+      height: 32px;
+      background-color: white;
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+      filter: saturate(0.4);
+    }
+    */
   </style>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
@@ -218,7 +239,16 @@
   </script>
 </head>
 <body>
+
 <div class="main1">
+  <!--
+  <div class="officialLinks">
+    <a target="_blank" href="https://t.me/Gamesandhistory" style="background-image: url('/static/img/tg.png')"></a>
+    <a target="_blank" href="https://boosty.to/viktorzu" style="background-image: url('/static/img/boosty.png')"></a>
+    <a target="_blank" href="https://www.twitch.tv/viktorzu/videos?filter=archives&sort=time" style="background-image: url('/static/img/tw.png')"></a>
+    <a target="_blank" href="https://live.vkvideo.ru/viktorzu?tab=records" style="background-image: url('/static/img/vk.png')"></a>
+  </div>
+  -->
   <h1><a href=".">Виктор Зуев,<span> начинающий стример</span></a></h1>
   <script>
     const flashMsg = '';
