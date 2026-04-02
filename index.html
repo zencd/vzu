@@ -19,6 +19,7 @@
       --mono: Menlo, Cascadia Code, monospace;
       --menu-a-color: #eed;
       --a-hover: #ffa;
+      --dev-badge-size: 80px;
     }
     * {
       margin: 0;
@@ -157,8 +158,8 @@
     .hasNewDataBadge {
       position: fixed;
       right: 10px; bottom: 10px;
-      width: 100px; height: 100px;
-      text-align: center; line-height: 100px;
+      width: var(--dev-badge-size); height: var(--dev-badge-size);
+      text-align: center; line-height: var(--dev-badge-size);
       border-radius: 50%;
       background: linear-gradient(135deg, #afa, #aaf);
       text-decoration: none;
@@ -167,8 +168,8 @@
     .refreshDataBadge {
       position: fixed;
       right: 10px; bottom: 120px;
-      width: 100px; height: 100px;
-      text-align: center; line-height: 100px;
+      width: var(--dev-badge-size); height: var(--dev-badge-size);
+      text-align: center; line-height: var(--dev-badge-size);
       border-radius: 50%;
       background: linear-gradient(135deg, #777, #eee);
       text-decoration: none;
@@ -180,7 +181,7 @@
     }
     .chapter.comment {
       color: #888;
-      text-transform: lowercase;
+      xtext-transform: lowercase;
     }
     @keyframes spin360 {
       from { transform: rotate(0deg); }
@@ -328,10 +329,10 @@
             <span class="tag">#аниме</span>
       </li>
       <li class="chapter comment">
-        ⓘ twitch забанили на 2 дня за Коносубу
+        ⓘ twitch забанили копирасты за Коносубу
       </li>
       <li class="chapter comment">
-        ⓘ ВК запись не сохранил из-за тех. работ
+        ⓘ ВК не сохранил запись из-за тех. работ
       </li>
     </ol>
   </div>
@@ -4985,7 +4986,7 @@
             <span class="tag">#кино</span>
       </li>
       <li class="chapter comment">
-        ⓘ стрим был прерван во избежание бана канала
+        ⓘ стрим быстро закончился из-за обнажёнки
       </li>
     </ol>
   </div>
@@ -15314,7 +15315,7 @@
     </ol>
   </div>
   <div class="stream" data-tags="film">
-    <h2>2020.05.09 Три взгляда на Великую войну [не досмотрели]</h2>
+    <h2>2020.05.09 Три взгляда на Великую войну</h2>
     <ol>
       <li class="chapter" data-tags="film">
         <span class="icon">🎬</span>
@@ -15338,7 +15339,7 @@
             <span class="tag">#кино</span>
       </li>
       <li class="chapter comment">
-        ⓘ канал забанили при просмотре &quot;августа&quot;
+        ⓘ twitch забанили за обнажёнку в августе
       </li>
     </ol>
   </div>
