@@ -10,7 +10,7 @@
   <link rel="icon" type="image/png" sizes="16x16" href="/static/icon1/16px.png">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <!--<link href="https://fonts.googleapis.com/css2?family=Tiny5&display=block" rel="stylesheet">-->
-  <link href="https://fonts.googleapis.com/css2?family=Handjet&display=block" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Handjet&display=fallback" rel="stylesheet">
   <style>
     :root {
       /* Menlo for macos, Cascadia Code for windows */
@@ -176,6 +176,9 @@
     .chapter[data-tags*="todo"] {
       color: #f00 !important;
       font-weight: bold;
+    }
+    .chapter.comment {
+      color: #888;
     }
     @keyframes spin360 {
       from { transform: rotate(0deg); }
