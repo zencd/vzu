@@ -17,9 +17,10 @@
       --head: "Tiny5", sans-serif;
       --head: "Handjet", sans-serif;
       --mono: Menlo, Cascadia Code, monospace;
-      --menu-a-color: #eed;
       --a-hover: #ffa;
       --dev-badge-size: 80px;
+      --white: #eed;
+      --menu-a-color: var(--white);
     }
     * {
       margin: 0;
@@ -78,7 +79,7 @@
       font-family: var(--mono);
       font-size: 12px;
       line-height: 16px;
-      color: white;
+      color: var(--white);
     }
     .history {
       font-family: var(--mono);
@@ -108,6 +109,7 @@
     h1 a {
       text-decoration: none;
       color: #dcdcdc !important;
+      color: var(--white) !important;
       font-weight: 400;
     }
     h1 a span { display: inline; }
@@ -123,9 +125,10 @@
       font-weight: 400;
       margin: 16px 0;
       font-style: normal;
-      color: #333;
+      xcolor: #333;
 
       background: -webkit-linear-gradient(0.25turn, #faa, #ffa);
+      background: -webkit-linear-gradient(0.24turn, #faa, #ffa);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
@@ -140,7 +143,7 @@
       text-transform: uppercase;
       letter-spacing: 2px;
       list-style-type: none;
-      color: #eed;
+      color: var(--white);
       letter-spacing: 0.6px;
     }
     .tag {
@@ -280,10 +283,10 @@
 <h2>Новые ссылки</h2>
   <h2>2026-04-03</h2>
   <div class="historyEntry">
-    🎬
-    <span>vk</span>
-    <a href="https://vkvideo.ru/video-236820127_456239053" target="_blank">Хон Гиль-дон 1986</a>
-    <span>Смотровая: Зуев, Загудаев</span>
+    👺
+    <span>px</span>
+    <a href="https://pixeldrain.com/u/5Ut68CeL" target="_blank">Коносуба 1-8 1/2</a>
+    <span>Канал возвращается к своим истокам</span>
   </div>
   <div class="historyEntry">
     👺
@@ -292,10 +295,10 @@
     <span>Канал возвращается к своим истокам</span>
   </div>
   <div class="historyEntry">
-    👺
-    <span>px</span>
-    <a href="https://pixeldrain.com/u/5Ut68CeL" target="_blank">Коносуба 1-8 1/2</a>
-    <span>Канал возвращается к своим истокам</span>
+    🎬
+    <span>vk</span>
+    <a href="https://vkvideo.ru/video-236820127_456239053" target="_blank">Хон Гиль-дон 1986</a>
+    <span>Смотровая: Зуев, Загудаев</span>
   </div>
   <h2>2026-04-02</h2>
   <div class="historyEntry">
@@ -2856,7 +2859,7 @@
     <span>Февраут, день 36. New Vegas</span>
   </div>
   <div class="footer">
-    Сайт вобще не официальный.
+    Сайт вобще не <s>планировался</s> официальный.
     <!--Официальный в <a href="https://t.me/Gamesandhistory">телеге</a>.-->
   </div>
 </div>

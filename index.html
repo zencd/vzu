@@ -17,9 +17,10 @@
       --head: "Tiny5", sans-serif;
       --head: "Handjet", sans-serif;
       --mono: Menlo, Cascadia Code, monospace;
-      --menu-a-color: #eed;
       --a-hover: #ffa;
       --dev-badge-size: 80px;
+      --white: #eed;
+      --menu-a-color: var(--white);
     }
     * {
       margin: 0;
@@ -78,7 +79,7 @@
       font-family: var(--mono);
       font-size: 12px;
       line-height: 16px;
-      color: white;
+      color: var(--white);
     }
     .history {
       font-family: var(--mono);
@@ -108,6 +109,7 @@
     h1 a {
       text-decoration: none;
       color: #dcdcdc !important;
+      color: var(--white) !important;
       font-weight: 400;
     }
     h1 a span { display: inline; }
@@ -123,9 +125,10 @@
       font-weight: 400;
       margin: 16px 0;
       font-style: normal;
-      color: #333;
+      xcolor: #333;
 
       background: -webkit-linear-gradient(0.25turn, #faa, #ffa);
+      background: -webkit-linear-gradient(0.24turn, #faa, #ffa);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
@@ -140,7 +143,7 @@
       text-transform: uppercase;
       letter-spacing: 2px;
       list-style-type: none;
-      color: #eed;
+      color: var(--white);
       letter-spacing: 0.6px;
     }
     .tag {
@@ -20990,7 +20993,7 @@
 })()
 </script>
   <div class="footer">
-    Сайт вобще не официальный.
+    Сайт вобще не <s>планировался</s> официальный.
     <!--Официальный в <a href="https://t.me/Gamesandhistory">телеге</a>.-->
     Стримов: 1181.
   </div>
