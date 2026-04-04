@@ -17,9 +17,10 @@
       --head: "Tiny5", sans-serif;
       --head: "Handjet", sans-serif;
       --mono: Menlo, Cascadia Code, monospace;
-      --menu-a-color: #eed;
       --a-hover: #ffa;
       --dev-badge-size: 80px;
+      --white: #eed;
+      --menu-a-color: var(--white);
     }
     * {
       margin: 0;
@@ -78,7 +79,7 @@
       font-family: var(--mono);
       font-size: 12px;
       line-height: 16px;
-      color: white;
+      color: var(--white);
     }
     .history {
       font-family: var(--mono);
@@ -108,6 +109,7 @@
     h1 a {
       text-decoration: none;
       color: #dcdcdc !important;
+      color: var(--white) !important;
       font-weight: 400;
     }
     h1 a span { display: inline; }
@@ -123,7 +125,6 @@
       font-weight: 400;
       margin: 16px 0;
       font-style: normal;
-      color: #333;
 
       background: -webkit-linear-gradient(0.25turn, #faa, #ffa);
       -webkit-background-clip: text;
@@ -140,7 +141,7 @@
       text-transform: uppercase;
       letter-spacing: 2px;
       list-style-type: none;
-      color: #eed;
+      color: var(--white);
       letter-spacing: 0.6px;
     }
     .tag {
@@ -309,12 +310,6 @@
     <span>vk</span>
     <a href="https://vkvideo.ru/video-236820127_456239053" target="_blank">Хон Гиль-дон 1986</a>
     <span>Смотровая: Зуев, Загудаев</span>
-  </div>
-  <div class="historyEntry">
-    🎬
-    <span>vk</span>
-    <a href="https://vkvideo.ru/video-236820127_456239052" target="_blank">Сказочное путешествие мистера Бильбо Беггинса хоббита 1985</a>
-    <span>Смотровая: Загудаев, Зуев, 1й выпуск</span>
   </div>
   <h2>2026-04-02</h2>
   <div class="historyEntry">
@@ -710,6 +705,12 @@
   <div class="historyEntry">
     📺
     <span>vk</span>
+    <a href="https://vkvideo.ru/video-236820127_456239036" target="_blank">Ведьмак 3/4 2002</a>
+    <span>Польский Ведьмак</span>
+  </div>
+  <div class="historyEntry">
+    📺
+    <span>vk</span>
     <a href="https://vkvideo.ru/video-236820127_456239045" target="_blank">Ведьмак 4/4 2002</a>
     <span>Польский Ведьмак</span>
   </div>
@@ -1080,6 +1081,12 @@
     <a href="https://www.twitch.tv/videos/49330755" target="_blank">Bound by Flame</a>
     <span>Зуев, Перевозчиков</span>
   </div>
+  <div class="historyEntry">
+    🐭
+    <span>vk</span>
+    <a href="https://vkvideo.ru/video-236820127_456239031" target="_blank">Легенда о принце Валианте 1991</a>
+    <span>Дата неизвестна</span>
+  </div>
   <h2>2026-03-25</h2>
   <div class="historyEntry">
     🎮
@@ -1407,22 +1414,10 @@
     <span>Польский Ведьмак</span>
   </div>
   <div class="historyEntry">
-    📺
-    <span>vk</span>
-    <a href="https://vkvideo.ru/video-236820127_456239036" target="_blank">Ведьмак 3/4 2002</a>
-    <span>Польский Ведьмак</span>
-  </div>
-  <div class="historyEntry">
     🎮
     <span>vk</span>
     <a href="https://vkvideo.ru/video-236820127_456239025" target="_blank">Max Payne 3 1/3</a>
     <span>Виктор Зуев и Андрей Загудаев</span>
-  </div>
-  <div class="historyEntry">
-    🐭
-    <span>vk</span>
-    <a href="https://vkvideo.ru/video-236820127_456239031" target="_blank">Легенда о принце Валианте 1991</a>
-    <span>Дата неизвестна</span>
   </div>
   <h2>2026-03-23</h2>
   <div class="historyEntry">
@@ -2875,7 +2870,7 @@
     <span>Февраут, день 36. New Vegas</span>
   </div>
   <div class="footer">
-    Сайт вобще не официальный.
+    Сайт вобще не <s>планировался</s> официальный.
     <!--Официальный в <a href="https://t.me/Gamesandhistory">телеге</a>.-->
   </div>
 </div>
