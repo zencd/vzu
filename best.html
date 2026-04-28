@@ -234,22 +234,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
   <script>
-    function toast(msg, color) {
-      Toastify({
-        text: msg,
-        duration: 4000,
-        //destination: "https://github.com/apvarun/toastify-js",
-        newWindow: true,
-        close: false,
-        gravity: "bottom",
-        position: "right",
-        stopOnFocus: true, // Prevents dismissing of toast on hover
-        style: {
-          background: color || 'grey',
-        },
-        onClick: function(){} // Callback after click
-      }).showToast();
-    }
+  const is_dev = false;
   </script>
 </head>
 <body>
@@ -289,7 +274,7 @@
   <li>🎮 Hitman Blood Money <span>стелс-прохождения</span>
   <li>🎮 Last of Us <span>с Загудаевым</span>
   <li>🎮 Mafia Definitive Edition <span>с Загудаевым</span>
-  <li>🎮 The Movies <span>с Дэвидом Паджаком</span>
+  <li>🎮 The Movies <span>с Дэйвидом Паджаком</span>
   <li>🎮 Любовь, деньги, рок-н-ролл <span>с Николаем Анохиным</span>
   <li>🎮 Пьяные души <span>хот сит соулс лайки на выпивание</span>
   <li>🎮 Русская рыбалка <span>с Петром и Андреем</span>
@@ -305,12 +290,14 @@
   <li>📺 Фантагиро <span>фентези Сильвио Берлускони</span>
   <li>📺 Хорнблоуэр <span>морской сериал на все деньги</span>
 </ol>
+<!--
 <h2>Смотрели несколько раз</h2>
 <ol>
   <li>🎬 Сказочное Путешествие Мистера Бильбо Беггинса Хоббита 1985 <span>советский хоббит</span>
   <li>🎬 В августе 44-го 2000 <span>минимум 2 раза</span>
   <li>🎬 Семь самураев 1954 <span>на DM и соло</span>
 </ol>
+-->
 <h2>Dungeons and Dragons</h2>
 <ol>
   <li>🎬 Подземелье драконов 2000
@@ -335,10 +322,28 @@
   <li>📺 Горец, сериал
   <li>👺 Горец в поисках мести 2007
 </ol>
+<h2>Самурайский период</h2>
+<ol>
+  <li>🎬 Семь самураев 1954
+  <li>🎬 Кагемуся тень воина 1980
+  <li>🎬 Ран 1985
+  <li>🎬 Полицейский-самурай 1991
+  <li>🎬 Шестиструнный самурай 1998
+  <li>🎬 затойчи 2003
+  <li>📺 Сегун 2024
+  <li>📺 Сегун 1980
+  <li>📺 Самурай и кошка 2014
+  <li>📺 Самурай-гурман
+  <li>👺 Самурай Чамплу
+  <li>👺 Сенгоку Басара
+  <li>🎮 Total War: Shogun 2
+  <li>🎮 Ghost of Tsushima
+</ol>
 <h2>Властелин колец</h2>
 <ol>
-  <li>🎬 Властелин колец 1-3 <span>душный просмотр трилогии</span>
+  <li>🎬 Властелин колец 1-3 <span>душный просмотр</span>
   <li>🎬 Властелин Колец 1-3 <span>режиссерская версия</span>
+  <li>🎬 Хоббит 1-3 <span>душный просмотр</span>
   <li>🎬 Хоббит 1-3 <span>режиссерская версия</span>
   <li>🎬 Хранители <span>СССР</span>
   <li>🎬 Сказочное путешествие мистера Бильбо Баггинса Хоббита <span>СССР</span>
@@ -358,6 +363,7 @@
   <li>🎮 Total War: Attila: The Dawnless Days
   <li>🎮 Gollum
   <li>🎮 Хоббит
+  <li>🎮 Герои 3 (Герои Колец и Средиземья)
 </ol>
   <div class="footer">
     Сайт вобще <s>не планировался</s> неофициальный.

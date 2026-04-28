@@ -14,7 +14,7 @@
     })
   }
   function filterStreamsByTag(tag) {
-    var $streams = document.querySelectorAll('.stream').forEach($stream => {
+    document.querySelectorAll('.stream').forEach($stream => {
       const streamTagSet = new Set($stream.getAttribute('data-tags').split(' '))
       if (streamTagSet.has(tag)) {
         $stream.style.display = 'block'
@@ -33,10 +33,10 @@
     })
   }
   function clearTagSelection() {
-    var $streams = document.querySelectorAll('.stream').forEach($stream => {
+    document.querySelectorAll('.stream').forEach($stream => {
       $stream.style.display = 'block'
     })
-    var $streams = document.querySelectorAll('.chapter').forEach($stream => {
+    document.querySelectorAll('.chapter').forEach($stream => {
       $stream.style.display = 'block'
     })
   }
@@ -50,5 +50,19 @@
   const $hasNewDataBadge = document.querySelector('.hasNewDataBadge')
   if ($hasNewDataBadge) {
     $hasNewDataBadge.addEventListener('click', e => {startSpinning(e.target)})
+  }
+
+  if (is_dev) {
+    document.querySelectorAll('li[data-dl-cmd]:not([data-dl-cmd=""])').forEach($li => {
+      $li.addEventListener('click', function(ev) {
+        if (ev.metaKey) {
+          const cmd = $li.getAttribute('data-dl-cmd')
+          navigator.clipboard.writeText(cmd)
+          //console.log(`Copied to clipboard: ${cmd}`)
+          toast(`Copied: ${cmd.substring(0, 40)}...`, 'green')
+          ev.preventDefault()
+        }
+      })
+    })
   }
 }())
