@@ -13,7 +13,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Handjet&display=fallback" rel="stylesheet">
   <style>
     :root {
-      /* Menlo for macos, Cascadia Code for windows */
       --head: "Tiny5", sans-serif;
       --head: "Handjet", sans-serif;
       --mono: Menlo, Cascadia Code, monospace;
@@ -21,7 +20,13 @@
       --dev-badge-size: 80px;
       --white: #eed;
       --menu-a-color: var(--white);
-      --fsText: 13.5px;
+      --fsText: 12px;
+    }
+    @media (max-resolution: 1.5dppx) {
+      /* larger font for low-dpi */
+      :root {
+        --fsText: 13.5px;
+      }
     }
     * {
       margin: 0;
@@ -298,7 +303,7 @@
         <option value="roleplay">💬 ролеплей</option>
         <option value="quiz">💬 викторина</option>
         <option value="tabletop">🎲 настолки</option>
-        <option value="warhammer">🤷 ваха</option>
+        <option value="warhammer">👑 ваха</option>
         <option value="zagi">🧑 заги</option>
     </select>
     <a href="https://t.me/Gamesandhistory" class="menuLinkTg" target="_blank">Телега</a>
@@ -320,6 +325,37 @@
     Arkham Asylum.
     Пишите в <a href="https://fuckthebots.com/" id="pmLink">телегу</a> если хотите поделиться ими с общественностью.
     <a href="https://t.me/ViktorZuStreams" target="_blank">Вавилон 5</a> доступен отдельно.
+  </div>
+  <div class="stream" data-tags="game warhammer">
+    <h2>2026.05.04 Последний стрим до отключения интернета!</h2>
+    <ol>
+      <li class="chapter" data-tags="game warhammer" data-dl-cmd="">
+        <span class="icon">🎮</span>
+        WH40K: Armageddon
+
+        <a href="https://live.vkvideo.ru/viktorzu/record/9e6b9e92-8f8d-47d9-a29c-9e1118f2ff32?tc=280" target="_blank">вк</a>
+
+            <span class="tag">#ваха</span>
+            <span class="tag">#игра</span>
+      </li>
+      <li class="chapter" data-tags="game warhammer" data-dl-cmd="">
+        <span class="icon">🎮</span>
+        WH40K: Final Liberation
+
+        <a href="https://live.vkvideo.ru/viktorzu/record/9e6b9e92-8f8d-47d9-a29c-9e1118f2ff32?tc=12557" target="_blank">вк</a>
+
+            <span class="tag">#ваха</span>
+            <span class="tag">#игра</span>
+      </li>
+      <li class="chapter" data-tags="game" data-dl-cmd="">
+        <span class="icon">🎮</span>
+        Таня Гроттер и магический контрабас
+
+        <a href="https://live.vkvideo.ru/viktorzu/record/9e6b9e92-8f8d-47d9-a29c-9e1118f2ff32?tc=17150" target="_blank">вк</a>
+
+            <span class="tag">#игра</span>
+      </li>
+    </ol>
   </div>
   <div class="stream" data-tags="game show talk warhammer">
     <h2>2026.04.30 Конфа по Вахе !boosty</h2>
@@ -19550,7 +19586,7 @@
       </li>
       <li class="chapter" data-tags="game zagi" data-dl-cmd="">
         <span class="icon">🎮</span>
-        LA Noire, начало обрезано
+        LA Noire P8, первый час пропущен
 
         <a href="https://vkvideo.ru/video-25951501_456239197" target="_blank">vk</a>
 
@@ -21863,7 +21899,7 @@
   <div class="footer">
     Сайт вобще <s>не планировался</s> неофициальный.
     <!--Официальный в <a href="https://t.me/Gamesandhistory">телеге</a>.-->
-    Стримов: 1208.
+    Стримов: 1209.
   </div>
 </div>
 <script src="/static/main.js"></script>

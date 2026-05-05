@@ -13,7 +13,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Handjet&display=fallback" rel="stylesheet">
   <style>
     :root {
-      /* Menlo for macos, Cascadia Code for windows */
       --head: "Tiny5", sans-serif;
       --head: "Handjet", sans-serif;
       --mono: Menlo, Cascadia Code, monospace;
@@ -21,7 +20,13 @@
       --dev-badge-size: 80px;
       --white: #eed;
       --menu-a-color: var(--white);
-      --fsText: 13.5px;
+      --fsText: 12px;
+    }
+    @media (max-resolution: 1.5dppx) {
+      /* larger font for low-dpi */
+      :root {
+        --fsText: 13.5px;
+      }
     }
     * {
       margin: 0;
