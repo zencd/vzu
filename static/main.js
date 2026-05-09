@@ -52,6 +52,7 @@
     $hasNewDataBadge.addEventListener('click', e => {startSpinning(e.target)})
   }
 
+/*
   if (is_dev) {
     document.querySelectorAll('li[data-dl-cmd]:not([data-dl-cmd=""])').forEach($li => {
       $li.addEventListener('click', function(ev) {
@@ -65,4 +66,5 @@
       })
     })
   }
+*/
 }())
