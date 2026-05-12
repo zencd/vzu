@@ -3,15 +3,18 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="preload" href="static/font/Handjet/Handjet-VariableFont_ELGR,ELSH,wght.ttf" as="font" type="font/ttf" crossorigin>
   <title>Виктор Зуев, начинающий стример</title>
   <meta name="darkreader-lock">
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js')
+        .then(reg => { console.log('Service worker registered', reg); })
+        .catch(err => { console.error('SW registration failed', err); });
+    }
+  </script>
   <link rel="apple-touch-icon" sizes="180x180" href="/static/icon1/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/static/icon1/32px.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/static/icon1/16px.png">
-<!--  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>-->
-<!--<link href="https://fonts.googleapis.com/css2?family=Tiny5&display=block" rel="stylesheet">-->
-<!--<link href="https://fonts.googleapis.com/css2?family=Handjet&display=fallback" rel="stylesheet">-->
   <style>
     :root {
       --head: "Tiny5", sans-serif;
@@ -27,8 +30,8 @@
       font-family: 'Handjet';
       font-style: normal;
       font-weight: 400;
-      src: url('static/font/Handjet/Handjet-VariableFont_ELGR,ELSH,wght.ttf') format('truetype');
-      font-display: swap;
+      src: url('/static/font/Handjet/Handjet-VariableFont_ELGR,ELSH,wght.ttf') format('truetype');
+      font-display: fallback;
     }
     @media (max-resolution: 1.5dppx) {
       /* larger font for low-dpi */
@@ -1951,7 +1954,7 @@
         <span class="icon">🎮</span>
         Five Hearts Under One Roof
 
-        <a href="https://live.vkvideo.ru/viktorzu/record/bd89275e-f292-4847-bfe4-dc56bbd508f1?tc=19160" target="_blank">вк:1</a>
+        <a href="https://live.vkvideo.ru/viktorzu/record/bd89275e-f292-4847-bfe4-dc56bbd508f1?tc=19166" target="_blank">вк:1</a>
         <a href="https://live.vkvideo.ru/viktorzu/record/d94cc40a-4dc8-4d3f-b838-eaf99ff24c0a?tc=0" target="_blank">вк:2</a>
 
             <span class="tag">#игра</span>
@@ -2639,7 +2642,7 @@
         <span class="icon">📺</span>
         Муссолини Сын века 2024
 
-        <a href="https://live.vkvideo.ru/viktorzu/record/12934ab1-0884-4c1a-9de1-e6fa58d64a33" target="_blank">вк</a>
+        <a href="https://live.vkvideo.ru/viktorzu/record/12934ab1-0884-4c1a-9de1-e6fa58d64a33?tc=380" target="_blank">вк</a>
 
             <span class="tag">#сериал</span>
       </li>
@@ -4231,7 +4234,7 @@
     <ol>
       <li class="chapter" data-tags="game" data-dl-cmd="">
         <span class="icon">🎮</span>
-        The Elder Scrolls IV: Oblivion Remastered D7 1/3
+        The Elder Scrolls IV: Oblivion Remastered D6 1/3
 
         <a href="https://live.vkvideo.ru/viktorzu/record/774469bd-9e8d-44db-852a-fe14a9e41009" target="_blank">вк</a>
         <a href="https://www.youtube.com/watch?v=8Hf31oWSMuk" target="_blank">ют</a>
@@ -4240,7 +4243,7 @@
       </li>
       <li class="chapter" data-tags="game" data-dl-cmd="">
         <span class="icon">🎮</span>
-        The Elder Scrolls IV: Oblivion Remastered D7 2/3
+        The Elder Scrolls IV: Oblivion Remastered D6 2/3
 
         <a href="https://live.vkvideo.ru/viktorzu/record/3af7fc0d-5e6d-48d4-9ec0-67cb96d1bf1b" target="_blank">вк</a>
         <a href="https://www.youtube.com/watch?v=u3niDJPpLHU" target="_blank">ют</a>
@@ -4249,7 +4252,7 @@
       </li>
       <li class="chapter" data-tags="game" data-dl-cmd="">
         <span class="icon">🎮</span>
-        The Elder Scrolls IV: Oblivion Remastered D7 3/3 fin
+        The Elder Scrolls IV: Oblivion Remastered D6 3/3 fin
 
         <a href="https://live.vkvideo.ru/viktorzu/record/2cbc4195-9922-4e74-8367-1348d64dfb8a" target="_blank">вк</a>
         <a href="https://www.youtube.com/watch?v=0Lw2jPYPecI" target="_blank">ют</a>
@@ -4298,7 +4301,7 @@
     <ol>
       <li class="chapter" data-tags="game" data-dl-cmd="">
         <span class="icon">🎮</span>
-        The Elder Scrolls IV: Oblivion Remastered D6
+        The Elder Scrolls IV: Oblivion Remastered D5
 
         <a href="https://live.vkvideo.ru/viktorzu/record/c8fe37ac-ee77-4e32-95f4-257143e0da45" target="_blank">вк</a>
         <a href="https://www.youtube.com/watch?v=Wz8Qxvroxt4" target="_blank">ют</a>
@@ -4356,7 +4359,7 @@
     <ol>
       <li class="chapter" data-tags="game" data-dl-cmd="">
         <span class="icon">🎮</span>
-        The Elder Scrolls IV: Oblivion Remastered D5
+        The Elder Scrolls IV: Oblivion Remastered D4
 
         <a href="https://live.vkvideo.ru/viktorzu/record/b45eebf2-3142-4880-b9ae-98f001d39a9f" target="_blank">вк</a>
         <a href="https://www.youtube.com/watch?v=uQHqXJyQGas" target="_blank">ют</a>
@@ -10168,16 +10171,16 @@
       </li>
     </ol>
   </div>
-  <div class="stream" data-tags="show">
+  <div class="stream" data-tags="talk">
     <h2>2023.06.23 Зуев, Гитман</h2>
     <ol>
-      <li class="chapter" data-tags="show" data-dl-cmd="">
-        <span class="icon">🍿</span>
+      <li class="chapter" data-tags="talk" data-dl-cmd="">
+        <span class="icon">💬</span>
         Зита и Гита 4
 
         <a href="https://www.youtube.com/watch?v=pqZHSS7lFaY" target="_blank">ют</a>
 
-            <span class="tag">#шоу</span>
+            <span class="tag">#общение</span>
       </li>
     </ol>
   </div>
@@ -10209,29 +10212,29 @@
       </li>
     </ol>
   </div>
-  <div class="stream" data-tags="show">
+  <div class="stream" data-tags="talk">
     <h2>2023.06.15 Зуев, Гитман</h2>
     <ol>
-      <li class="chapter" data-tags="show" data-dl-cmd="">
-        <span class="icon">🍿</span>
+      <li class="chapter" data-tags="talk" data-dl-cmd="">
+        <span class="icon">💬</span>
         Зита и Гита 3
 
         <a href="https://www.youtube.com/watch?v=k1jabpAEREA" target="_blank">ют</a>
 
-            <span class="tag">#шоу</span>
+            <span class="tag">#общение</span>
       </li>
     </ol>
   </div>
-  <div class="stream" data-tags="show">
+  <div class="stream" data-tags="talk">
     <h2>2023.06.14 Зуев, Гитман</h2>
     <ol>
-      <li class="chapter" data-tags="show" data-dl-cmd="">
-        <span class="icon">🍿</span>
+      <li class="chapter" data-tags="talk" data-dl-cmd="">
+        <span class="icon">💬</span>
         Зита и Гита 2
 
         <a href="https://www.youtube.com/watch?v=aXQ_j0RSbB0" target="_blank">ют</a>
 
-            <span class="tag">#шоу</span>
+            <span class="tag">#общение</span>
       </li>
     </ol>
   </div>
@@ -10408,7 +10411,7 @@
       </li>
     </ol>
   </div>
-  <div class="stream" data-tags="game talk">
+  <div class="stream" data-tags="game lecture">
     <h2>2023.05.30 Неспешные дейлики в HSR, затем ИстFUCK: смотрим историческую дичь с ютуба</h2>
     <ol>
       <li class="chapter" data-tags="game" data-dl-cmd="">
@@ -10420,7 +10423,7 @@
 
             <span class="tag">#игра</span>
       </li>
-      <li class="chapter" data-tags="talk" data-dl-cmd="">
+      <li class="chapter" data-tags="lecture" data-dl-cmd="">
         <span class="icon">💬</span>
         ИстFUCK: смотрим историческую дичь с ютуба
 
@@ -10428,7 +10431,7 @@
         <a href="https://www.youtube.com/watch?v=oMP7TWlsyeE&amp;t=12225s" target="_blank">ют</a>
         <a href="https://t.me/ViktorZuStreams/97" target="_blank">тг</a>
 
-            <span class="tag">#общение</span>
+            <span class="tag">#лекция</span>
       </li>
     </ol>
   </div>
@@ -10690,7 +10693,7 @@
         <span class="icon">📺</span>
         Вавилон-5 4.07 Прозрение
 
-        <a href="https://live.vkvideo.ru/viktorzu/record/77426e29-44dd-4318-98df-0aa79a5c5f06" target="_blank">вк</a>
+        <a href="https://live.vkvideo.ru/viktorzu/record/77426e29-44dd-4318-98df-0aa79a5c5f06?tc=278" target="_blank">вк</a>
         <a href="https://t.me/ViktorZuStreams/105" target="_blank">тг</a>
 
             <span class="tag">#сериал</span>
@@ -10699,7 +10702,7 @@
         <span class="icon">📺</span>
         Вавилон-5 4.08 Иллюзия правды
 
-        <a href="https://live.vkvideo.ru/viktorzu/record/77426e29-44dd-4318-98df-0aa79a5c5f06" target="_blank">вк</a>
+        <a href="https://live.vkvideo.ru/viktorzu/record/77426e29-44dd-4318-98df-0aa79a5c5f06?tc=4480" target="_blank">вк</a>
         <a href="https://t.me/ViktorZuStreams/106" target="_blank">тг</a>
 
             <span class="tag">#сериал</span>
@@ -10708,7 +10711,7 @@
         <span class="icon">📺</span>
         Вавилон-5 4.09 Искупление
 
-        <a href="https://live.vkvideo.ru/viktorzu/record/77426e29-44dd-4318-98df-0aa79a5c5f06" target="_blank">вк</a>
+        <a href="https://live.vkvideo.ru/viktorzu/record/77426e29-44dd-4318-98df-0aa79a5c5f06?tc=7928" target="_blank">вк</a>
         <a href="https://t.me/ViktorZuStreams/107" target="_blank">тг</a>
 
             <span class="tag">#сериал</span>
@@ -10717,7 +10720,7 @@
         <span class="icon">📺</span>
         Вавилон-5 4.10 Поездка на Марс
 
-        <a href="https://live.vkvideo.ru/viktorzu/record/77426e29-44dd-4318-98df-0aa79a5c5f06" target="_blank">вк</a>
+        <a href="https://live.vkvideo.ru/viktorzu/record/77426e29-44dd-4318-98df-0aa79a5c5f06?tc=11325" target="_blank">вк</a>
         <a href="https://t.me/ViktorZuStreams/108" target="_blank">тг</a>
 
             <span class="tag">#сериал</span>
@@ -10774,16 +10777,16 @@
         <span class="icon">📺</span>
         Вавилон-5 4.17 Лицо врага
 
-        <a href="https://live.vkvideo.ru/viktorzu/record/d2614058-09af-4239-9aa9-34a975b085d5" target="_blank">вк</a>
+        <a href="https://live.vkvideo.ru/viktorzu/record/d2614058-09af-4239-9aa9-34a975b085d5?tc=365" target="_blank">вк</a>
         <a href="https://t.me/ViktorZuStreams/115" target="_blank">тг</a>
 
             <span class="tag">#сериал</span>
       </li>
       <li class="chapter" data-tags="series" data-dl-cmd="">
         <span class="icon">📺</span>
-        Вавилон-5 4.18 Разрывы в реальном времени
+        Вавилон-5 4.18 Перекрестки во времени
 
-        <a href="https://live.vkvideo.ru/viktorzu/record/d2614058-09af-4239-9aa9-34a975b085d5" target="_blank">вк</a>
+        <a href="https://live.vkvideo.ru/viktorzu/record/d2614058-09af-4239-9aa9-34a975b085d5?tc=3545" target="_blank">вк</a>
         <a href="https://t.me/ViktorZuStreams/116" target="_blank">тг</a>
 
             <span class="tag">#сериал</span>
@@ -10792,7 +10795,7 @@
         <span class="icon">📺</span>
         Вавилон-5 4.19 Между тьмой и светом
 
-        <a href="https://live.vkvideo.ru/viktorzu/record/d2614058-09af-4239-9aa9-34a975b085d5" target="_blank">вк</a>
+        <a href="https://live.vkvideo.ru/viktorzu/record/d2614058-09af-4239-9aa9-34a975b085d5?tc=6600" target="_blank">вк</a>
         <a href="https://t.me/ViktorZuStreams/117" target="_blank">тг</a>
 
             <span class="tag">#сериал</span>
@@ -10801,7 +10804,7 @@
         <span class="icon">📺</span>
         Вавилон-5 4.20 Эндшпиль
 
-        <a href="https://live.vkvideo.ru/viktorzu/record/d2614058-09af-4239-9aa9-34a975b085d5" target="_blank">вк</a>
+        <a href="https://live.vkvideo.ru/viktorzu/record/d2614058-09af-4239-9aa9-34a975b085d5?tc=9990" target="_blank">вк</a>
         <a href="https://t.me/ViktorZuStreams/118" target="_blank">тг</a>
 
             <span class="tag">#сериал</span>
@@ -10810,7 +10813,7 @@
         <span class="icon">📺</span>
         Вавилон-5 4.21 Восходящая звезда
 
-        <a href="https://live.vkvideo.ru/viktorzu/record/d2614058-09af-4239-9aa9-34a975b085d5" target="_blank">вк</a>
+        <a href="https://live.vkvideo.ru/viktorzu/record/d2614058-09af-4239-9aa9-34a975b085d5?tc=13695" target="_blank">вк</a>
         <a href="https://t.me/ViktorZuStreams/119" target="_blank">тг</a>
 
             <span class="tag">#сериал</span>
@@ -10819,7 +10822,7 @@
         <span class="icon">📺</span>
         Вавилон-5 4.22 Деконструкция падающих звёзд
 
-        <a href="https://live.vkvideo.ru/viktorzu/record/d2614058-09af-4239-9aa9-34a975b085d5" target="_blank">вк</a>
+        <a href="https://live.vkvideo.ru/viktorzu/record/d2614058-09af-4239-9aa9-34a975b085d5?tc=16935" target="_blank">вк</a>
         <a href="https://t.me/ViktorZuStreams/120" target="_blank">тг</a>
 
             <span class="tag">#сериал</span>
@@ -11513,16 +11516,16 @@
       </li>
     </ol>
   </div>
-  <div class="stream" data-tags="show">
+  <div class="stream" data-tags="talk">
     <h2>2023.05.19 Зуев, Гитман</h2>
     <ol>
-      <li class="chapter" data-tags="show" data-dl-cmd="">
-        <span class="icon">🍿</span>
+      <li class="chapter" data-tags="talk" data-dl-cmd="">
+        <span class="icon">💬</span>
         Зита и Гита 1
 
         <a href="https://www.youtube.com/watch?v=TxjwR9nN6qM" target="_blank">ют</a>
 
-            <span class="tag">#шоу</span>
+            <span class="tag">#общение</span>
       </li>
     </ol>
   </div>
@@ -14241,7 +14244,7 @@
     <ol>
       <li class="chapter" data-tags="game" data-dl-cmd="">
         <span class="icon">🎮</span>
-        Elden Ring
+        Elden Ring drunk
 
         <a href="https://www.youtube.com/watch?v=EILpyVc19iE" target="_blank">ют</a>
 

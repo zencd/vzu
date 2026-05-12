@@ -3,15 +3,18 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="preload" href="static/font/Handjet/Handjet-VariableFont_ELGR,ELSH,wght.ttf" as="font" type="font/ttf" crossorigin>
   <title>Виктор Зуев, начинающий стример</title>
   <meta name="darkreader-lock">
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js')
+        .then(reg => { console.log('Service worker registered', reg); })
+        .catch(err => { console.error('SW registration failed', err); });
+    }
+  </script>
   <link rel="apple-touch-icon" sizes="180x180" href="/static/icon1/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/static/icon1/32px.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/static/icon1/16px.png">
-<!--  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>-->
-<!--<link href="https://fonts.googleapis.com/css2?family=Tiny5&display=block" rel="stylesheet">-->
-<!--<link href="https://fonts.googleapis.com/css2?family=Handjet&display=fallback" rel="stylesheet">-->
   <style>
     :root {
       --head: "Tiny5", sans-serif;
@@ -27,8 +30,8 @@
       font-family: 'Handjet';
       font-style: normal;
       font-weight: 400;
-      src: url('static/font/Handjet/Handjet-VariableFont_ELGR,ELSH,wght.ttf') format('truetype');
-      font-display: swap;
+      src: url('/static/font/Handjet/Handjet-VariableFont_ELGR,ELSH,wght.ttf') format('truetype');
+      font-display: fallback;
     }
     @media (max-resolution: 1.5dppx) {
       /* larger font for low-dpi */
