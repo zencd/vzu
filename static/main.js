@@ -52,6 +52,23 @@
     $hasNewDataBadge.addEventListener('click', e => {startSpinning(e.target)})
   }
 
+  function enhanceLinksToShowMessageAboutTerem() {
+    const notifiedAboutTerem = 'notifiedAboutTerem'
+    //localStorage.setItem(notifiedAboutTerem, '0')
+    if (localStorage.getItem(notifiedAboutTerem) !== '1') {
+      document.querySelectorAll('.chapter a[href*="/1617186507/"]').forEach($a => {
+        $a.addEventListener('click', event => {
+          if (localStorage.getItem(notifiedAboutTerem) !== '1') {
+            alert(`Закрытый чат "Светлый терем" доступен бустерам.\n${event.target.getAttribute('href')}`)
+            localStorage.setItem(notifiedAboutTerem, '1')
+          }
+        })
+      })
+    }
+  }
+
+  enhanceLinksToShowMessageAboutTerem()
+
 /*
   if (is_dev) {
     document.querySelectorAll('li[data-dl-cmd]:not([data-dl-cmd=""])').forEach($li => {
