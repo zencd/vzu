@@ -69,11 +69,11 @@
 
   enhanceLinksToShowMessageAboutTerem()
 
-/*
   if (is_dev) {
     document.querySelectorAll('li[data-dl-cmd]:not([data-dl-cmd=""])').forEach($li => {
       $li.addEventListener('click', function(ev) {
-        if (ev.metaKey) {
+        //console.log('target', ev.target.tagName)
+        if (ev.metaKey && ev.button === 0 && ev.target.tagName === 'LI') {
           const cmd = $li.getAttribute('data-dl-cmd')
           navigator.clipboard.writeText(cmd)
           //console.log(`Copied to clipboard: ${cmd}`)
@@ -83,5 +83,5 @@
       })
     })
   }
-*/
+
 }())
