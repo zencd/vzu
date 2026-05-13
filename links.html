@@ -327,4 +327,20 @@
 </div>
 <script src="/static/main.js"></script>
 </body>
+  <script>
+    (function() {
+      const notifiedAboutTerem = 'notifiedAboutTerem'
+      //localStorage.setItem(notifiedAboutTerem, '0')
+      if (localStorage.getItem(notifiedAboutTerem) !== '1') {
+        document.querySelectorAll('.chapter a[href*="/1617186507/"]').forEach($a => {
+          $a.addEventListener('click', event => {
+            if (localStorage.getItem(notifiedAboutTerem) !== '1') {
+              alert('Закрытый чат "Светлый терем" доступен бустерам.')
+              localStorage.setItem(notifiedAboutTerem, '1')
+            }
+          })
+        })
+      }
+    })()
+  </script>
 </html>
