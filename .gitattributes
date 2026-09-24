@@ -1,0 +1,2 @@
+# Treat all text files as text and normalize them to LF on commit
+* text=auto
